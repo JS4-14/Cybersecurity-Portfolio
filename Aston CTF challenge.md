@@ -1,4 +1,4 @@
-# 🏆 Aston x Warwick InterUniversity Cybersecurity CTF
+# 🏆 Aston x Warwick University Cybersecurity CTF
 
 ## Overview
 
