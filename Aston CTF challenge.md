@@ -44,17 +44,11 @@ Worked through logic-based and unconventional problems requiring creative proble
 
 ## Key Challenges Encountered
 
-### Hidden Data in Images
-Some flags were concealed within image files, requiring investigation of metadata and embedded content.
-
 ### Audio Analysis
-Certain challenges involved analysing audio files and identifying hidden patterns to recover information.
-
-### Encoded & Hashed Data
-Multiple challenges required recognising encoding or hashing methods before attempting recovery.
+Certain challenges involved analysing audio files and identifying hidden patterns to recover information 
 
 ### Time-Constrained Problem Solving
-The competition rewarded efficient investigation and prioritisation of tasks across different challenge categories.
+The competition rewarded efficient investigation and prioritisation of tasks and the points rewarded for each task decreased as more people solved them
 
 ---
 
@@ -64,7 +58,7 @@ The competition rewarded efficient investigation and prioritisation of tasks acr
 Many challenges were solved through collaboration and sharing different perspectives between teammates.
 
 ### 🧠 Methodical Investigation Wins
-Systematically analysing evidence proved more effective than randomly testing tools and techniques.
+Analysing evidence proved more effective than randomly testing tools and techniques hoping to get a solution.
 
 ### 🔒 Practical Cybersecurity Differs From Theory
 The competition provided hands-on experience applying concepts from cryptography, forensics and steganography in realistic scenarios.
