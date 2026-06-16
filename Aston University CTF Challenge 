@@ -1,46 +1,104 @@
-Aston x Warwick Cybersecurity CTF
+# 🏆 Aston x Warwick University Cybersecurity CTF
 
-Overview
+## Overview
 
-I participated in an inter-university Capture The Flag (CTF) competition hosted by Aston University and Warwick University student societies.
-My team achieved 3rd place overall and was the only Aston University team to finish on the podium.
+I participated in an university Capture The Flag (CTF) competition hosted by Aston University and Warwick University student societies.
 
+Working as part of a team, we achieved **3rd Place Overall**, making us the **only Aston University team to finish on the podium**.
 
-Challenge Areas
+The competition consisted of practical cybersecurity challenges covering multiple domains, requiring technical investigation, analytical thinking and teamwork under time pressure.
 
-Digital Forensics
-Investigated files and metadata to identify hidden information and recover challenge flags.
+---
 
-Steganography
-Examined image and audio files for concealed data using file analysis techniques.
+## Competition Areas
 
-Cryptography
-Analysed encoded and encrypted data and applied appropriate decoding methods.
+### 🔍 Digital Forensics
+Investigated files, artefacts and metadata to identify hidden information and recover challenge flags.
 
-OSINT
-Used publicly available information to identify clues and solve investigative challenges.
+### 🔐 Cryptography
+Analysed encoded and encrypted data and applied appropriate decoding and decryption techniques.
 
-Tools Used
-grep
-CyberChef
-Linux command line
-Metadata analysis
-Audio analysis
-Image inspection tools
+### 🖼️ Steganography
+Examined image and audio files for concealed information using file analysis techniques.
 
+### 🌐 Open Source Intelligence (OSINT)
+Used publicly available information to gather clues and solve investigative challenges.
 
-What I Learned
+### ⚙️ Miscellaneous Challenges
+Worked through logic-based and unconventional problems requiring creative problem-solving approaches.
 
-Teamwork is Critical
-Many challenges were solved through collaboration and sharing different approaches.
+---
 
-Methodical Investigation
-Systematically analysing files and evidence was more effective than randomly trying tools.
+## Tools & Techniques Used
 
-Practical Cybersecurity
-The competition demonstrated how concepts such as cryptography, steganography and forensics are applied in practice rather than just theory.
+| Category | Tools / Techniques |
+|-----------|-------------------|
+| Linux | grep, file analysis, command-line investigation |
+| Forensics | Metadata inspection, artefact analysis |
+| Cryptography | Hash identification, encoding analysis |
+| Steganography | Image inspection, audio analysis |
+| Investigation | Pattern recognition, systematic troubleshooting |
+| Teamwork | Collaborative problem solving under time pressure |
 
-Outcome
-3rd Place Overall
-Only Aston University team on the podium
-Practical experience in multiple cybersecurity domains
+---
+
+## Key Challenges Encountered
+
+### Hidden Data in Images
+Some flags were concealed within image files, requiring investigation of metadata and embedded content.
+
+### Audio Analysis
+Certain challenges involved analysing audio files and identifying hidden patterns to recover information.
+
+### Encoded & Hashed Data
+Multiple challenges required recognising encoding or hashing methods before attempting recovery.
+
+### Time-Constrained Problem Solving
+The competition rewarded efficient investigation and prioritisation of tasks across different challenge categories.
+
+---
+
+## Key Takeaways
+
+### 🤝 Teamwork Matters
+Many challenges were solved through collaboration and sharing different perspectives between teammates.
+
+### 🧠 Methodical Investigation Wins
+Systematically analysing evidence proved more effective than randomly testing tools and techniques.
+
+### 🔒 Practical Cybersecurity Differs From Theory
+The competition provided hands-on experience applying concepts from cryptography, forensics and steganography in realistic scenarios.
+
+### 📈 Continuous Learning
+The event highlighted areas I want to explore further, particularly digital forensics and incident investigation.
+
+---
+
+## Results
+
+🏅 **3rd Place Overall**
+
+🏅 **Only Aston University team on the podium**
+
+🏅 Practical exposure to:
+- Digital Forensics
+- Cryptography
+- Steganography
+- OSINT
+- Linux Investigation Techniques
+
+---
+
+## Evidence
+
+This repository contains documentation related to the event, including:
+
+- Competition announcement
+- Event materials
+- Supporting documentation provided by organisers
+
+---
+
+## Skills Demonstrated
+
+`Cybersecurity` `Digital Forensics` `Cryptography` `Steganography` `OSINT` `Linux` `Problem Solving` `Teamwork` `Investigation`
