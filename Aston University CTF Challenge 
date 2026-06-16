@@ -1,0 +1,46 @@
+Aston x Warwick Cybersecurity CTF
+
+Overview
+
+I participated in an inter-university Capture The Flag (CTF) competition hosted by Aston University and Warwick University student societies.
+My team achieved 3rd place overall and was the only Aston University team to finish on the podium.
+
+
+Challenge Areas
+
+Digital Forensics
+Investigated files and metadata to identify hidden information and recover challenge flags.
+
+Steganography
+Examined image and audio files for concealed data using file analysis techniques.
+
+Cryptography
+Analysed encoded and encrypted data and applied appropriate decoding methods.
+
+OSINT
+Used publicly available information to identify clues and solve investigative challenges.
+
+Tools Used
+grep
+CyberChef
+Linux command line
+Metadata analysis
+Audio analysis
+Image inspection tools
+
+
+What I Learned
+
+Teamwork is Critical
+Many challenges were solved through collaboration and sharing different approaches.
+
+Methodical Investigation
+Systematically analysing files and evidence was more effective than randomly trying tools.
+
+Practical Cybersecurity
+The competition demonstrated how concepts such as cryptography, steganography and forensics are applied in practice rather than just theory.
+
+Outcome
+3rd Place Overall
+Only Aston University team on the podium
+Practical experience in multiple cybersecurity domains
