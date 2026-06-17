@@ -42,6 +42,15 @@ Worked through logic-based and unconventional problems requiring creative proble
 
 ---
 
+## My Contribution 
+
+During the competition I worked on challenges involving:
+
+ - Cryptography tasks 
+ - File and metadata analysis
+
+---
+
 ## Key Challenges Encountered
 
 ### Audio Analysis
