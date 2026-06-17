@@ -48,6 +48,8 @@ During the competition I worked on challenges involving:
 
  - Cryptography tasks 
  - File and metadata analysis
+ - Steganography challenges 
+ - Linux Command Line
 
 ---
 
