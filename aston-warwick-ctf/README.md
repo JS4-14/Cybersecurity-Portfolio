@@ -4,7 +4,7 @@
 
 I participated in an university Capture The Flag (CTF) competition hosted by Aston University and Warwick University student societies.
 
-Working as part of a team, we achieved **3rd Place Overall**, making us the **only Aston University team to finish on the podium**.
+Working as part of a team, we were the **highest performing Aston team**
 
 The competition consisted of practical cybersecurity challenges covering multiple domains, requiring technical investigation, analytical thinking and teamwork under time pressure.
 
