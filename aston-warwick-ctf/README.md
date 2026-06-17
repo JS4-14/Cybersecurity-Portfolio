@@ -81,8 +81,6 @@ The event highlighted areas I want to explore further, particularly digital fore
 
 ## Results
 
-🏅 **3rd Place Overall**
-
 🏅 **Only Aston University team on the podium**
 
 🏅 Practical exposure to:
