@@ -33,11 +33,10 @@ Worked through logic-based and unconventional problems requiring creative proble
 
 | Category | Tools / Techniques |
 |-----------|-------------------|
-| Linux | grep, file analysis, command-line investigation |
+| Linux | grep, file analysis, command line, strings |
 | Forensics | Metadata inspection, artefact analysis |
 | Cryptography | Hash identification, encoding analysis |
 | Steganography | Image inspection, audio analysis |
-| Investigation | Pattern recognition, systematic troubleshooting |
 | Teamwork | Collaborative problem solving under time pressure |
 
 ---
