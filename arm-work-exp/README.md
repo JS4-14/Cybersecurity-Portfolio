@@ -4,7 +4,7 @@
 
 As part of an engineering and technology challenge supported by Arm, I worked in a team to design, build and test a protective chassis for a micro:bit device.
 
-The project simulated the challenge of protecting sensitive electronics during deployment and impact events. Our team designed a housing, collected acceleration data during free-fall tests, investigated wireless communications between devices and presented our findings to Arm representatives.
+The project simulated the challenge of protecting the micro:bit during deployment and impact events in order to measure various data. Our team designed a housing, collected acceleration data during free-fall tests, investigated wireless communications between devices and presented our findings to Arm representatives.
 
 ---
 
@@ -15,7 +15,6 @@ During the project, I contributed to:
 - Designing and building a protective chassis to house a micro:bit during drop tests.
 - Programming the micro:bit buttons to start and stop data collection.
 - Recording acceleration measurements during free-fall experiments.
-- Receiving and decrypting wireless signals transmitted from another micro:bit.
 - Presenting the team's process, findings and outcomes to a panel of Arm members.
 
 ---
@@ -48,11 +47,7 @@ Balancing protection and functionality required iterative design decisions and t
 
 ### Reliable Data Collection
 
-Ensuring acceleration measurements were captured consistently during free-fall tests required careful programming and experimentation.
-
-### Wireless Signal Analysis
-
-Receiving and interpreting wireless signals involved troubleshooting and logical problem-solving to understand transmitted information.
+Ensuring acceleration measurements were captured consistently during free-fall tests required iterative testing and experimentation.
 
 ---
 
