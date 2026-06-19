@@ -1,138 +1,112 @@
-SOC Incident Investigation: [Incident Name]
+# SOC Incident Investigation: [Incident Name]
 
-Executive Summary
+## Executive Summary
 
-A suspicious security event was identified involving [brief description].
+A suspicious security event was identified involving **[brief description]**.
 
-The investigation determined that [finding].
+The investigation determined that **[finding]**.
 
 Immediate containment actions were recommended to reduce further risk.
 
 ---
 
-Incident Overview
+## Incident Overview
 
-Field| Details
-Incident Type| [Phishing / Account Compromise / Malware / Brute Force / Other]
-Severity| [Low / Medium / High / Critical]
-Status| [Open / Resolved / Contained]
-Detection Method| [User Report / Alert / Monitoring / Other]
-Affected Assets| [User Account, Laptop, Server, Email System, etc.]
+| Field | Details |
+|---------|---------|
+| Incident Type | Phishing / Account Compromise / Malware |
+| Severity | Low / Medium / High |
+| Status | Resolved |
+| Detection Method | User Report / Alert / Monitoring |
+| Affected Assets | User Account, Laptop, Email System |
 
 ---
 
-Initial Alert
+## Initial Alert
 
 The incident was identified after:
 
-- [Alert or observation 1]
-- [Alert or observation 2]
-- [Alert or observation 3]
+- Suspicious login detected
+- User reported unusual activity
+- Security alert triggered
 
 ---
 
-Timeline of Events
+## Timeline of Events
 
-Time| Event
-[Time]| [Event]
-[Time]| [Event]
-[Time]| [Event]
-[Time]| [Event]
-
----
-
-Indicators of Compromise (IOCs)
-
-- [IOC 1]
-- [IOC 2]
-- [IOC 3]
-- [IOC 4]
+| Time | Event |
+|--------|--------|
+| 09:00 | User received phishing email |
+| 09:05 | User clicked malicious link |
+| 09:07 | Credentials entered |
+| 09:20 | Attacker login observed |
+| 09:25 | Alert generated |
+| 09:40 | Investigation initiated |
 
 ---
 
-Analysis
+## Indicators of Compromise (IOCs)
 
-What Happened?
-
-[Describe the incident.]
-
-How Was It Detected?
-
-[Explain how the suspicious activity was identified.]
-
-Why Is It Suspicious?
-
-[Explain the evidence and reasoning.]
-
-Likely Attacker Objective
-
-- [Credential Theft]
-- [Malware Delivery]
-- [Persistence]
-- [Privilege Escalation]
-- [Data Exfiltration]
-- [Other]
+- Suspicious sender domain
+- Unusual login location
+- Multiple failed login attempts
+- Unexpected outbound emails
 
 ---
 
-Impact Assessment
+## Analysis
+
+The phishing email impersonated a trusted service and persuaded the user to enter credentials.
+
+Following credential theft, an attacker successfully authenticated using the compromised account.
+
+The unusual login location and subsequent email activity indicate likely account compromise.
+
+---
+
+## Impact Assessment
 
 Potential impacts include:
 
-- [Impact 1]
-- [Impact 2]
-- [Impact 3]
+- Account compromise
+- Data exposure
+- Internal phishing propagation
+- Reputational damage
 
-Severity was assessed as [Low / Medium / High / Critical] because [reason].
-
----
-
-Containment Actions
-
-- [Action 1]
-- [Action 2]
-- [Action 3]
-- [Action 4]
+Severity was assessed as **Medium** due to successful account access.
 
 ---
 
-Lessons Learned
+## Containment Actions
+
+- Password reset
+- Session revocation
+- MFA enforcement
+- Block malicious domains
+- Notify affected users
+
+---
+
+## Lessons Learned
 
 The incident highlights the importance of:
 
-- [Lesson 1]
-- [Lesson 2]
-- [Lesson 3]
+- Security awareness training
+- Multi-factor authentication
+- Email filtering controls
+- Monitoring for anomalous logins
 
 ---
 
-Recommendations
+## Recommendations
 
-1. [Recommendation 1]
-2. [Recommendation 2]
-3. [Recommendation 3]
-4. [Recommendation 4]
-
----
-
-MITRE ATT&CK Techniques (Optional)
-
-Technique| Description
-[Txxxx]| [Technique Name]
-[Txxxx]| [Technique Name]
+1. Improve phishing awareness training.
+2. Enable MFA for all users.
+3. Monitor unusual login locations.
+4. Strengthen email security controls.
 
 ---
 
-Evidence
+## Key Skills Demonstrated
 
-Screenshot(s)
-
-"Investigation Evidence" (../images/example.png)
-
-Figure 1: [Description of evidence]
-
----
-
-Key Skills Demonstrated
-
-"Incident Response" "Threat Analysis" "Investigation" "Security Operations" "Risk Assessment"
+`Incident Response` `Threat Analysis` `Investigation` `Security Operations` `Risk Assessment`
