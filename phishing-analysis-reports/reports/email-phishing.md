@@ -11,7 +11,7 @@
 This email impersonates Better Business Bureau (BBB) using urgency and a call to action (downloading from link) to pressure the recipient into downloading a document from the link provided.
 
 ## Attack Vector
-A byt.ly link (allows to mask and shorten original address so users don't see the full domain name) which directs the user to a site where they can download a document.
+The email contains a Bit.ly URL which conceals the destination domain. The user is encouraged to download a document, potentially exposing them to malware.
 
 ## Red Flags
 1. The sender address, `jrsmith@securitymmgt.com`, does not match BBB.
