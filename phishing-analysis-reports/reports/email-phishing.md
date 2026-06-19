@@ -10,8 +10,12 @@
 ## Summary
 This email impersonates Better Business Bureau (BBB) using urgency and a call to action (downloading from link) to pressure the recipient into downloading a document from the link provided.
 
+------
+
 ## Attack Vector
 The email contains a Bit.ly URL which conceals the destination domain. The user is encouraged to download a document, potentially exposing them to malware.
+
+------
 
 ## Red Flags
 1. The sender address, `jrsmith@securitymmgt.com`, does not match BBB.
@@ -19,16 +23,33 @@ The email contains a Bit.ly URL which conceals the destination domain. The user 
 3. The attacker uses a URL shortening service (Bit.ly) to conceal the true destination. This prevents users from immediately verifying whether the link belongs to Better Business Bureau and increases the likelihood of interaction.
 4. The email contains grammar issues that reduces credibility.
 
+------
+
 ## What Failed
 - Sender address does not match the brand being impersonated.
 - The message relies on urgency rather than legitimate communication.
 - The email contains wording issues that are inconsistent with a professional institution.
+
+------
 
 ## Indicators of Compromise
 - Suspicious sender domain: `jrsmith@securitymmgt.com`
 - Brand impersonation: Better Business Bureau
 - Phishing urgency ("within 24 hours to us")
 - URL shortened using Bit.ly
+
+------
+
+## Threat Objective
+
+The attacker appears to be attempting one of the following:
+
+- Credential theft
+- Malware through a downloaded file
+
+The use of a shortened URL prevents the recipient from easily verifying the legitimacy of the destination.
+
+------
 
 ## Detection Ideas
 
@@ -37,12 +58,16 @@ The email contains a Bit.ly URL which conceals the destination domain. The user 
 - URL scanning (VirusTotal) and sandboxing
 - User reporting
 
+------
+
 ## Mitigation
 - Train staff to inspect sender domains carefully
 - Hover over links before clicking
 - Use MFA to reduce the impact of stolen credentials
 - Report suspicious emails to security teams
 - Block impersonation domains at the mail gateway
+
+------
 
 ## Key Takeaways
 Phishing emails often succeed by combining urgency with brand impersonation. Careful inspection of the sender domain and link destination is often enough to reveal the attack.
