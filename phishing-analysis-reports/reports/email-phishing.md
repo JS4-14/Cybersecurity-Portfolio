@@ -1,4 +1,4 @@
 #
 
 
-[Fake Email Alert](../images/email-phishing.jpg)
+![Fake Email Alert](../images/email-phishing.jpg)
