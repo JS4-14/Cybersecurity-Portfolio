@@ -48,3 +48,5 @@ A blue “review your account” button that likely redirects to a fake login or
 ## Key Takeaways
 Phishing emails often succeed by combining urgency with brand impersonation. Careful inspection of the sender domain and link destination is often enough to reveal the attack.
 I learned new detentions ideas mentioned above - SPF, DKIM and DMARC validation 
+
+Phishing succeeds because users focus on the urgency of the message
