@@ -8,35 +8,34 @@
 ---
 
 ## Summary
-This email impersonates American Express using urgency and a suspicious call to action to pressure the recipient into clicking a link that is likely intended to steal credentials.
+This email impersonates Better Business Bureau (BBB) using urgency and a call to action (downloading from link) to pressure the recipient into downloading a document from the link provided.
 
 ## Attack Vector
-A blue “review your account” button that likely redirects to a fake login or credential harvesting page.
+A byt.ly link (allows to mask and shorten original address so users don't see the full domain name) which directs the user to a site where they can download a document.
 
 ## Red Flags
-1. The sender address, `administraciones@pentagon-seguridad.cl`, does not match American Express.
+1. The sender address, `jrsmith@securitymmgt.com`, does not match BBB.
 2. The message uses urgent language to pressure the user into acting quickly.
-3. The call to action button encourages the user to click without verifying the destination.
-4. The email contains grammar and formatting issues that reduce credibility.
+3. The link is a Bit.ly link which masks the original address hence users will naturally click it since it looks harmless.
+4. The email contains grammar issues that reduces credibility.
 
 ## What Failed
-- Sender reputation does not match the brand being impersonated.
-- The message relies on urgency and fear rather than legitimate account communication.
-- The email contains wording and formatting issues that are inconsistent with a professional financial institution.
+- Sender address does not match the brand being impersonated.
+- The message relies on urgency rather than legitimate communication.
+- The email contains wording issues that are inconsistent with a professional institution.
 
 ## Indicators of Compromise
-- Suspicious sender domain: `pentagon-seguridad.cl`
-- Brand impersonation: American Express
-- Phishing style urgency
-- Potential malicious link behind the button
+- Suspicious sender domain: `jrsmith@securitymmgt.com`
+- Brand impersonation: Better Business Bureau
+- Phishing urgency ("within 24 hours to us")
+- Potential malicious link
 
 ## Detection Ideas
 
 - SPF, DKIM and DMARC validation
-- Email gateway sender reputation checks
 - Lookalike domain detection
-- URL scanning and sandboxing
-- User reporting and security awareness monitoring
+- URL scanning (VirusTotal) and sandboxing
+- User reporting
 
 ## Mitigation
 - Train staff to inspect sender domains carefully
@@ -47,7 +46,6 @@ A blue “review your account” button that likely redirects to a fake login or
 
 ## Key Takeaways
 Phishing emails often succeed by combining urgency with brand impersonation. Careful inspection of the sender domain and link destination is often enough to reveal the attack.
-I learned new detentions ideas mentioned above - SPF, DKIM and DMARC validation 
 
-Phishing succeeds because users focus on the urgency of the message
+Phishing succeeds because users focus on the urgency of the message.
 
