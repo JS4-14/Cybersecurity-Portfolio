@@ -1,4 +1,4 @@
-# Threat Analysis Report: Fake American Express Alert
+# Threat Analysis Report: Fake Better Business Bureau Email
 
 
 ![Fake Email Alert](../images/email-phishing.jpg)
