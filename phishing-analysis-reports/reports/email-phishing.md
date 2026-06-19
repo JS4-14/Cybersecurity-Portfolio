@@ -28,7 +28,7 @@ The email contains a Bit.ly URL which conceals the destination domain. The user 
 - Suspicious sender domain: `jrsmith@securitymmgt.com`
 - Brand impersonation: Better Business Bureau
 - Phishing urgency ("within 24 hours to us")
-- Potential malicious link
+- URL shortened using Bit.ly
 
 ## Detection Ideas
 
