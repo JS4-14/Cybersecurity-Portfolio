@@ -8,15 +8,15 @@
 ---
 
 ## Summary
-This email impersonates American Express and uses urgency, brand mismatch, and a suspicious call-to-action to pressure the recipient into clicking a link that is likely intended to harvest credentials.
+This email impersonates American Express using urgency and a suspicious call to action to pressure the recipient into clicking a link that is likely intended to steal credentials.
 
 ## Attack Vector
-A blue “review your account” button that likely redirects to a fake login or credential-harvesting page.
+A blue “review your account” button that likely redirects to a fake login or credential harvesting page.
 
 ## Red Flags
 1. The sender address, `administraciones@pentagon-seguridad.cl`, does not match American Express.
 2. The message uses urgent language to pressure the user into acting quickly.
-3. The call-to-action button encourages the user to click without verifying the destination.
+3. The call to action button encourages the user to click without verifying the destination.
 4. The email contains grammar and formatting issues that reduce credibility.
 
 ## What Failed
@@ -27,10 +27,11 @@ A blue “review your account” button that likely redirects to a fake login or
 ## Indicators of Compromise
 - Suspicious sender domain: `pentagon-seguridad.cl`
 - Brand impersonation: American Express
-- Phishing-style urgency language
-- Potential credential-harvesting link behind the button
+- Phishing style urgency
+- Potential malicious link behind the button
 
 ## Detection Ideas
+
 - SPF, DKIM and DMARC validation
 - Email gateway sender reputation checks
 - Lookalike domain detection
@@ -46,3 +47,4 @@ A blue “review your account” button that likely redirects to a fake login or
 
 ## Key Takeaways
 Phishing emails often succeed by combining urgency with brand impersonation. Careful inspection of the sender domain and link destination is often enough to reveal the attack.
+I learnt new detentions ideas mentioned above - SPF, DKIM and DMARC validation 
