@@ -3,7 +3,7 @@
 
 ![Fake Email Alert](../images/email-phishing.jpg)
 
-*Figure 1: Example phishing email.*
+*Figure 1: Example phishing email using BBB.*
 
 ---
 
