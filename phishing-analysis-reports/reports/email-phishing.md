@@ -16,7 +16,7 @@ A byt.ly link (allows to mask and shorten original address so users don't see th
 ## Red Flags
 1. The sender address, `jrsmith@securitymmgt.com`, does not match BBB.
 2. The message uses urgent language to pressure the user into acting quickly.
-3. The link is a Bit.ly link which masks the original address hence users will naturally click it since it looks harmless.
+3. The attacker uses a URL shortening service (Bit.ly) to conceal the true destination. This prevents users from immediately verifying whether the link belongs to Better Business Bureau and increases the likelihood of interaction.
 4. The email contains grammar issues that reduces credibility.
 
 ## What Failed
