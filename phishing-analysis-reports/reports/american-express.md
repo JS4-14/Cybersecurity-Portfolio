@@ -34,6 +34,16 @@ Spelling mistake made in the email - until spelt "untill". A large company like 
 
 ## Indicators of Compromise
 
+- Sender domain: pentagon-seguridad.cl
+
+- Brand mismatch: sender does not match American Express
+
+- Urgent language: temporary suspension / verify now
+
+- Call To Action (Urgency): “review your account now” button
+
+- Grammar/spelling issues
+
 ------
 
 ## Detection Ideas
