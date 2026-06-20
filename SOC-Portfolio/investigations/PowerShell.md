@@ -108,12 +108,30 @@ The incident highlights the importance of:
 
 ---
 
+## MITRE ATT&CK Techniques (Optional)
+
+Technique| Description
+[Txxxx]| [Technique Name]
+[Txxxx]| [Technique Name]
+
+---
+
+## Evidence
+
+Screenshot(s)
+
+"Investigation Evidence" (../images/example.png)
+
+Figure 1: [Description of evidence]
+
+---
+
 ## Recommendations
 
-1. Improve phishing awareness training.
-2. Enable MFA for all users.
-3. Monitor unusual login locations.
-4. Strengthen email security controls.
+1. [Recommendation 1]
+2. [Recommendation 2]
+3. [Recommendation 3]
+4. [Recommendation 4]
 
 ---
 
