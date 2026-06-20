@@ -13,12 +13,12 @@ Immediate containment actions were recommended to reduce further risk.
 ## Incident Overview
 
 | Field | Details |
-|---------|---------|
-| Incident Type | Phishing / Account Compromise / Malware |
-| Severity | Low / Medium / High |
-| Status | Resolved |
-| Detection Method | User Report / Alert / Monitoring |
-| Affected Assets | User Account, Laptop, Email System |
+|--------|---------|
+| Incident Type | [Phishing / Malware / Account Compromise / Brute Force / Other] |
+| Severity | [Low / Medium / High / Critical] |
+| Status | [Open / Contained / Resolved] |
+| Detection Method | [User Report / Alert / Monitoring / Other] |
+| Affected Assets | [User Account, Workstation, Server, Email System, etc.] |
 
 ---
 
@@ -26,41 +26,82 @@ Immediate containment actions were recommended to reduce further risk.
 
 The incident was identified after:
 
-- Suspicious login detected
-- User reported unusual activity
-- Security alert triggered
+- [Observation 1]
+- [Observation 2]
+- [Observation 3]
 
 ---
 
 ## Timeline of Events
 
 | Time | Event |
-|--------|--------|
-| 09:00 | User received phishing email |
-| 09:05 | User clicked malicious link |
-| 09:07 | Credentials entered |
-| 09:20 | Attacker login observed |
-| 09:25 | Alert generated |
-| 09:40 | Investigation initiated |
+|------|--------|
+| [Time] | [Event] |
+| [Time] | [Event] |
+| [Time] | [Event] |
+| [Time] | [Event] |
 
 ---
 
 ## Indicators of Compromise (IOCs)
 
-- Suspicious sender domain
-- Unusual login location
-- Multiple failed login attempts
-- Unexpected outbound emails
+- [IOC 1]
+- [IOC 2]
+- [IOC 3]
+- [IOC 4]
+
+---
+
+## Investigation Notes
+
+### Evidence Supporting Compromise
+
+- [Evidence 1]
+- [Evidence 2]
+- [Evidence 3]
+
+### Alternative Explanations Considered
+
+| Possibility | Reason Ruled Out |
+|------------|------------------|
+| [Alternative Explanation] | [Reason] |
+| [Alternative Explanation] | [Reason] |
 
 ---
 
 ## Analysis
 
-The phishing email impersonated a trusted service and persuaded the user to enter credentials.
+### What Happened?
 
-Following credential theft, an attacker successfully authenticated using the compromised account.
+[Describe the sequence of events.]
 
-The unusual login location and subsequent email activity indicate likely account compromise.
+### How Was It Detected?
+
+[Explain how the suspicious activity was identified.]
+
+### Why Is It Suspicious?
+
+[Explain the evidence and reasoning.]
+
+### Likely Attacker Objective
+
+- [Credential Theft]
+- [Malware Delivery]
+- [Persistence]
+- [Privilege Escalation]
+- [Data Exfiltration]
+- [Lateral Movement]
+- [Other]
+
+---
+
+## Confidence Assessment
+
+**Confidence Level:** [High / Medium / Low]
+
+**Reason:**
+
+[Explain how confident you are in your findings and identify any assumptions.]
 
 ---
 
@@ -68,22 +109,29 @@ The unusual login location and subsequent email activity indicate likely account
 
 Potential impacts include:
 
-- Account compromise
-- Data exposure
-- Internal phishing propagation
-- Reputational damage
+- [Impact 1]
+- [Impact 2]
+- [Impact 3]
 
-Severity was assessed as **Medium** due to successful account access.
+Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]**.
 
 ---
 
 ## Containment Actions
 
-- Password reset
-- Session revocation
-- MFA enforcement
-- Block malicious domains
-- Notify affected users
+- [Action 1]
+- [Action 2]
+- [Action 3]
+- [Action 4]
+
+---
+
+## Recommendations
+
+1. [Recommendation 1]
+2. [Recommendation 2]
+3. [Recommendation 3]
+4. [Recommendation 4]
 
 ---
 
@@ -91,22 +139,31 @@ Severity was assessed as **Medium** due to successful account access.
 
 The incident highlights the importance of:
 
-- Security awareness training
-- Multi-factor authentication
-- Email filtering controls
-- Monitoring for anomalous logins
+- [Lesson 1]
+- [Lesson 2]
+- [Lesson 3]
 
 ---
 
-## Recommendations
+## MITRE ATT&CK Techniques
 
-1. Improve phishing awareness training.
-2. Enable MFA for all users.
-3. Monitor unusual login locations.
-4. Strengthen email security controls.
+| Technique | Description |
+|------------|------------|
+| [Txxxx] | [Technique Name] |
+| [Txxxx] | [Technique Name] |
+
+---
+
+## Evidence
+
+### Screenshot(s)
+
+![Investigation Evidence](../images/example.png)
+
+*Figure 1: [Description of evidence]*
 
 ---
 
 ## Key Skills Demonstrated
 
-`Incident Response` `Threat Analysis` `Investigation` `Security Operations` `Risk Assessment`
+`Incident Response` `Threat Analysis` `Investigation` `Security Operations` `Log Analysis` `Risk Assessment`
