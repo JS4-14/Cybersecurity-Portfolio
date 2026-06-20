@@ -2,24 +2,23 @@
 
 ## Executive Summary
 
-A suspicious security event was identified involving [brief description].
+A suspicious security event was identified involving **[brief description]**.
 
-The investigation determined that [finding].
+The investigation determined that **[finding]**.
 
 Immediate containment actions were recommended to reduce further risk.
-
 
 ---
 
 ## Incident Overview
 
 | Field | Details |
-|---------|---------|
-| Incident Type | Phishing / Account Compromise / Malware |
-| Severity | Low / Medium / High |
-| Status | Resolved |
-| Detection Method | User Report / Alert / Monitoring |
-| Affected Assets | User Account, Laptop, Email System |
+|--------|---------|
+| Incident Type | [Phishing / Malware / Account Compromise / Brute Force / Other] |
+| Severity | [Low / Medium / High / Critical] |
+| Status | [Open / Contained / Resolved] |
+| Detection Method | [User Report / Alert / Monitoring / Other] |
+| Affected Assets | [User Account, Workstation, Server, Email System, etc.] |
 
 ---
 
@@ -27,19 +26,20 @@ Immediate containment actions were recommended to reduce further risk.
 
 The incident was identified after:
 
-- Suspicious login detected
-- User reported unusual activity
-- Security alert triggered
+- [Observation 1]
+- [Observation 2]
+- [Observation 3]
 
 ---
 
 ## Timeline of Events
 
-Time| Event
-[Time]| [Event]
-[Time]| [Event]
-[Time]| [Event]
-[Time]| [Event]
+| Time | Event |
+|------|--------|
+| [Time] | [Event] |
+| [Time] | [Event] |
+| [Time] | [Event] |
+| [Time] | [Event] |
 
 ---
 
@@ -52,28 +52,56 @@ Time| Event
 
 ---
 
+## Investigation Notes
+
+### Evidence Supporting Compromise
+
+- [Evidence 1]
+- [Evidence 2]
+- [Evidence 3]
+
+### Alternative Explanations Considered
+
+| Possibility | Reason Ruled Out |
+|------------|------------------|
+| [Alternative Explanation] | [Reason] |
+| [Alternative Explanation] | [Reason] |
+
+---
+
 ## Analysis
 
-What Happened?
+### What Happened?
 
-[Describe the incident.]
+[Describe the sequence of events.]
 
-How Was It Detected?
+### How Was It Detected?
 
 [Explain how the suspicious activity was identified.]
 
-Why Is It Suspicious?
+### Why Is It Suspicious?
 
 [Explain the evidence and reasoning.]
 
-Likely Attacker Objective
+### Likely Attacker Objective
 
 - [Credential Theft]
 - [Malware Delivery]
 - [Persistence]
 - [Privilege Escalation]
 - [Data Exfiltration]
+- [Lateral Movement]
 - [Other]
+
+---
+
+## Confidence Assessment
+
+**Confidence Level:** [High / Medium / Low]
+
+**Reason:**
+
+[Explain how confident you are in your findings and identify any assumptions.]
 
 ---
 
@@ -85,7 +113,7 @@ Potential impacts include:
 - [Impact 2]
 - [Impact 3]
 
-Severity was assessed as [Low / Medium / High / Critical] because [reason].
+Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]**.
 
 ---
 
@@ -95,6 +123,15 @@ Severity was assessed as [Low / Medium / High / Critical] because [reason].
 - [Action 2]
 - [Action 3]
 - [Action 4]
+
+---
+
+## Recommendations
+
+1. [Recommendation 1]
+2. [Recommendation 2]
+3. [Recommendation 3]
+4. [Recommendation 4]
 
 ---
 
@@ -108,33 +145,25 @@ The incident highlights the importance of:
 
 ---
 
-## MITRE ATT&CK Techniques (Optional)
+## MITRE ATT&CK Techniques
 
-Technique| Description
-[Txxxx]| [Technique Name]
-[Txxxx]| [Technique Name]
+| Technique | Description |
+|------------|------------|
+| [Txxxx] | [Technique Name] |
+| [Txxxx] | [Technique Name] |
 
 ---
 
 ## Evidence
 
-Screenshot(s)
+### Screenshot(s)
 
-"Investigation Evidence" (../images/example.png)
+![Investigation Evidence](../images/example.png)
 
-Figure 1: [Description of evidence]
-
----
-
-## Recommendations
-
-1. [Recommendation 1]
-2. [Recommendation 2]
-3. [Recommendation 3]
-4. [Recommendation 4]
+*Figure 1: [Description of evidence]*
 
 ---
 
 ## Key Skills Demonstrated
 
-`Incident Response` `Threat Analysis` `Investigation` `Security Operations` `Risk Assessment`
+`Incident Response` `Threat Analysis` `Investigation` `Security Operations` `Log Analysis` `Risk Assessment`
