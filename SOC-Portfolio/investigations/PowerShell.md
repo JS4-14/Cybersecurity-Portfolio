@@ -54,11 +54,26 @@ Time| Event
 
 ## Analysis
 
-The phishing email impersonated a trusted service and persuaded the user to enter credentials.
+What Happened?
 
-Following credential theft, an attacker successfully authenticated using the compromised account.
+[Describe the incident.]
 
-The unusual login location and subsequent email activity indicate likely account compromise.
+How Was It Detected?
+
+[Explain how the suspicious activity was identified.]
+
+Why Is It Suspicious?
+
+[Explain the evidence and reasoning.]
+
+Likely Attacker Objective
+
+- [Credential Theft]
+- [Malware Delivery]
+- [Persistence]
+- [Privilege Escalation]
+- [Data Exfiltration]
+- [Other]
 
 ---
 
@@ -66,22 +81,20 @@ The unusual login location and subsequent email activity indicate likely account
 
 Potential impacts include:
 
-- Account compromise
-- Data exposure
-- Internal phishing propagation
-- Reputational damage
+- [Impact 1]
+- [Impact 2]
+- [Impact 3]
 
-Severity was assessed as **Medium** due to successful account access.
+Severity was assessed as [Low / Medium / High / Critical] because [reason].
 
 ---
 
 ## Containment Actions
 
-- Password reset
-- Session revocation
-- MFA enforcement
-- Block malicious domains
-- Notify affected users
+- [Action 1]
+- [Action 2]
+- [Action 3]
+- [Action 4]
 
 ---
 
@@ -89,10 +102,9 @@ Severity was assessed as **Medium** due to successful account access.
 
 The incident highlights the importance of:
 
-- Security awareness training
-- Multi-factor authentication
-- Email filtering controls
-- Monitoring for anomalous logins
+- [Lesson 1]
+- [Lesson 2]
+- [Lesson 3]
 
 ---
 
