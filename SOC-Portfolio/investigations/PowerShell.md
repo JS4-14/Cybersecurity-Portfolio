@@ -2,11 +2,12 @@
 
 ## Executive Summary
 
-A suspicious security event was identified involving **[brief description]**.
+A suspicious security event was identified involving [brief description].
 
-The investigation determined that **[finding]**.
+The investigation determined that [finding].
 
 Immediate containment actions were recommended to reduce further risk.
+
 
 ---
 
