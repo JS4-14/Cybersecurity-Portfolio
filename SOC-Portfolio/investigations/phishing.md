@@ -1,47 +1,49 @@
-SOC Incident Investigation: [Incident Name]
+# SOC Incident Investigation: [Incident Name]
 
-Executive Summary
+## Executive Summary
 
-A suspicious security event was identified involving [brief description].
+A suspicious security event was identified involving **[brief description]**.
 
-The investigation determined that [finding].
+The investigation determined that **[finding]**.
 
 Immediate containment actions were recommended to reduce further risk.
 
 ---
 
-Incident Overview
+## Incident Overview
 
-Field| Details
-Incident Type| [Phishing / Account Compromise / Malware / Brute Force / Other]
-Severity| [Low / Medium / High / Critical]
-Status| [Open / Resolved / Contained]
-Detection Method| [User Report / Alert / Monitoring / Other]
-Affected Assets| [User Account, Laptop, Server, Email System, etc.]
+| Field | Details |
+|--------|---------|
+| Incident Type | [Phishing / Malware / Account Compromise / Brute Force / Other] |
+| Severity | [Low / Medium / High / Critical] |
+| Status | [Open / Contained / Resolved] |
+| Detection Method | [User Report / Alert / Monitoring / Other] |
+| Affected Assets | [User Account, Workstation, Server, Email System, etc.] |
 
 ---
 
-Initial Alert
+## Initial Alert
 
 The incident was identified after:
 
-- [Alert or observation 1]
-- [Alert or observation 2]
-- [Alert or observation 3]
+- [Observation 1]
+- [Observation 2]
+- [Observation 3]
 
 ---
 
-Timeline of Events
+## Timeline of Events
 
-Time| Event
-[Time]| [Event]
-[Time]| [Event]
-[Time]| [Event]
-[Time]| [Event]
+| Time | Event |
+|------|--------|
+| [Time] | [Event] |
+| [Time] | [Event] |
+| [Time] | [Event] |
+| [Time] | [Event] |
 
 ---
 
-Indicators of Compromise (IOCs)
+## Indicators of Compromise (IOCs)
 
 - [IOC 1]
 - [IOC 2]
@@ -50,32 +52,60 @@ Indicators of Compromise (IOCs)
 
 ---
 
-Analysis
+## Investigation Notes
 
-What Happened?
+### Evidence Supporting Compromise
 
-[Describe the incident.]
+- [Evidence 1]
+- [Evidence 2]
+- [Evidence 3]
 
-How Was It Detected?
+### Alternative Explanations Considered
+
+| Possibility | Reason Ruled Out |
+|------------|------------------|
+| [Alternative Explanation] | [Reason] |
+| [Alternative Explanation] | [Reason] |
+
+---
+
+## Analysis
+
+### What Happened?
+
+[Describe the sequence of events.]
+
+### How Was It Detected?
 
 [Explain how the suspicious activity was identified.]
 
-Why Is It Suspicious?
+### Why Is It Suspicious?
 
 [Explain the evidence and reasoning.]
 
-Likely Attacker Objective
+### Likely Attacker Objective
 
 - [Credential Theft]
 - [Malware Delivery]
 - [Persistence]
 - [Privilege Escalation]
 - [Data Exfiltration]
+- [Lateral Movement]
 - [Other]
 
 ---
 
-Impact Assessment
+## Confidence Assessment
+
+**Confidence Level:** [High / Medium / Low]
+
+**Reason:**
+
+[Explain how confident you are in your findings and identify any assumptions.]
+
+---
+
+## Impact Assessment
 
 Potential impacts include:
 
@@ -83,11 +113,11 @@ Potential impacts include:
 - [Impact 2]
 - [Impact 3]
 
-Severity was assessed as [Low / Medium / High / Critical] because [reason].
+Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]**.
 
 ---
 
-Containment Actions
+## Containment Actions
 
 - [Action 1]
 - [Action 2]
@@ -96,7 +126,16 @@ Containment Actions
 
 ---
 
-Lessons Learned
+## Recommendations
+
+1. [Recommendation 1]
+2. [Recommendation 2]
+3. [Recommendation 3]
+4. [Recommendation 4]
+
+---
+
+## Lessons Learned
 
 The incident highlights the importance of:
 
@@ -106,33 +145,25 @@ The incident highlights the importance of:
 
 ---
 
-Recommendations
+## MITRE ATT&CK Techniques
 
-1. [Recommendation 1]
-2. [Recommendation 2]
-3. [Recommendation 3]
-4. [Recommendation 4]
-
----
-
-MITRE ATT&CK Techniques (Optional)
-
-Technique| Description
-[Txxxx]| [Technique Name]
-[Txxxx]| [Technique Name]
+| Technique | Description |
+|------------|------------|
+| [Txxxx] | [Technique Name] |
+| [Txxxx] | [Technique Name] |
 
 ---
 
-Evidence
+## Evidence
 
-Screenshot(s)
+### Screenshot(s)
 
-"Investigation Evidence" (../images/example.png)
+![Investigation Evidence](../images/example.png)
 
-Figure 1: [Description of evidence]
+*Figure 1: [Description of evidence]*
 
 ---
 
-Key Skills Demonstrated
+## Key Skills Demonstrated
 
-"Incident Response" "Threat Analysis" "Investigation" "Security Operations" "Risk Assessment"
+`Incident Response` `Threat Analysis` `Investigation` `Security Operations` `Log Analysis` `Risk Assessment`
