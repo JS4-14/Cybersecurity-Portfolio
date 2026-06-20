@@ -35,23 +35,20 @@ The incident was identified after:
 
 ## Timeline of Events
 
-| Time | Event |
-|--------|--------|
-| 09:00 | User received phishing email |
-| 09:05 | User clicked malicious link |
-| 09:07 | Credentials entered |
-| 09:20 | Attacker login observed |
-| 09:25 | Alert generated |
-| 09:40 | Investigation initiated |
+Time| Event
+[Time]| [Event]
+[Time]| [Event]
+[Time]| [Event]
+[Time]| [Event]
 
 ---
 
 ## Indicators of Compromise (IOCs)
 
-- Suspicious sender domain
-- Unusual login location
-- Multiple failed login attempts
-- Unexpected outbound emails
+- [IOC 1]
+- [IOC 2]
+- [IOC 3]
+- [IOC 4]
 
 ---
 
