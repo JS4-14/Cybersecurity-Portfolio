@@ -4,7 +4,7 @@
 
 A suspicious security event was identified involving **a login from 2 different locations**.
 
-The investigation determined that a user account was likely **compromised following a phishing attack that harvested Microsoft credentials**. This resulted in multiple phishing emails being sent internally**.
+The investigation determined that a user account was likely **compromised following a phishing attack that harvested Microsoft credentials**. This resulted in multiple phishing emails being sent internally.
 
 Immediate containment actions were recommended to reduce further risk.
 
