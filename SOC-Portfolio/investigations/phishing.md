@@ -1,4 +1,4 @@
-# SOC Incident Investigation: [Incident Name]
+# SOC Incident Investigation: Phishing Incident
 
 ## Executive Summary
 
