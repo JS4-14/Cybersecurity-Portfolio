@@ -97,8 +97,6 @@ The incident was identified after:
 ### Likely Attacker Objective
 
 - Credential Theft
-
-
 - Data Exfiltration
 - Other
 
@@ -133,10 +131,10 @@ The attacker has full access to emails that were accessed hence can view the com
 
 ## Containment Actions
 
-- [Action 1]
-- [Action 2]
-- [Action 3]
-- [Action 4]
+- Change password of affected devices 
+- Enable MFA for every device not configured
+- [RESEARCHED] Review sign-in logs for additional suspicious activity
+- [RESEARCHED] Disable or temporarily lock the compromised account
 
 ---
 
