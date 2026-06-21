@@ -2,9 +2,9 @@
 
 ## Executive Summary
 
-A suspicious security event was identified involving **[brief description]**.
+A suspicious security event was identified involving **a login from 2 different locations**.
 
-The investigation determined that **[finding]**.
+The investigation determined that a user account was likely **compromised following a phishing attack that harvested Microsoft credentials**. This resulted in multiple phishing emails being sent internally**.
 
 Immediate containment actions were recommended to reduce further risk.
 
@@ -14,11 +14,11 @@ Immediate containment actions were recommended to reduce further risk.
 
 | Field | Details |
 |--------|---------|
-| Incident Type | [Phishing / Malware / Account Compromise / Brute Force / Other] |
-| Severity | [Low / Medium / High / Critical] |
-| Status | [Open / Contained / Resolved] |
-| Detection Method | [User Report / Alert / Monitoring / Other] |
-| Affected Assets | [User Account, Workstation, Server, Email System, etc.] |
+| Incident Type | Phishing |
+| Severity | High |
+| Status | Contained |
+| Detection Method | Monitoring / Alert |
+| Affected Assets | User Account, Workstation, Email |
 
 ---
 
@@ -26,9 +26,8 @@ Immediate containment actions were recommended to reduce further risk.
 
 The incident was identified after:
 
-- [Observation 1]
-- [Observation 2]
-- [Observation 3]
+- Two logins 7 mins apart from 2 different locations from the same account 
+- Multiple emails sent internally from same account (Compromised account)
 
 ---
 
@@ -36,19 +35,19 @@ The incident was identified after:
 
 | Time | Event |
 |------|--------|
-| [Time] | [Event] |
-| [Time] | [Event] |
-| [Time] | [Event] |
-| [Time] | [Event] |
+| 09:12 | Email Received |
+| 09:15 | Link clicked |
+| 09:17 | Credentials Entered |
+| 09:34 | Login - London |
+| 09:41 | Login - Nigeria |
+| 09:44 | 27 emails sent internally |
 
 ---
 
 ## Indicators of Compromise (IOCs)
 
-- [IOC 1]
-- [IOC 2]
-- [IOC 3]
-- [IOC 4]
+- Login from the same account minutes apart but in 2 different locations
+- Multiple emails outbound from the compromised account
 
 ---
 
@@ -56,15 +55,15 @@ The incident was identified after:
 
 ### Evidence Supporting Compromise
 
-- [Evidence 1]
-- [Evidence 2]
-- [Evidence 3]
+- Multiple internal emails sent out from the initial affected device 
+- Email from microsoft urging users password to be changed 
+- 'Verify Account' button which masks the address 
 
 ### Alternative Explanations Considered
 
 | Possibility | Reason Ruled Out |
 |------------|------------------|
-| [Alternative Explanation] | [Reason] |
+| Potential Trojan | No software or files downloaded |
 | [Alternative Explanation] | [Reason] |
 
 ---
@@ -73,7 +72,19 @@ The incident was identified after:
 
 ### What Happened?
 
-[Describe the sequence of events.]
+1. Employee received email thought to be from microsoft
+
+2. User was told their account password would expire in 24 hours
+
+3. Due to the sense of urgency the user pressed the button
+
+4. Pressing the button opened a replicate Microsoft site
+
+5. The employer entered their details
+
+6. At 9:34 & 9:44 the same account logged in from 2 different countries
+
+7. 9:44: Multiple internal emails sent from employer
 
 ### How Was It Detected?
 
@@ -85,23 +96,25 @@ The incident was identified after:
 
 ### Likely Attacker Objective
 
-- [Credential Theft]
-- [Malware Delivery]
-- [Persistence]
-- [Privilege Escalation]
-- [Data Exfiltration]
-- [Lateral Movement]
-- [Other]
+- Credential Theft
+
+
+- Data Exfiltration
+- Other
 
 ---
 
 ## Confidence Assessment
 
-**Confidence Level:** [High / Medium / Low]
+**Confidence Level:** High
 
 **Reason:**
 
-[Explain how confident you are in your findings and identify any assumptions.]
+Evidence indicates the attack was a phishing attempt due to the typical phishing signals identified. These were:
+
+ 1. Impersonating a company
+ 2. Sense of urgency to make the user take quick action
+ 3. 'Verify Now' button which redirects to a site 
 
 ---
 
@@ -109,11 +122,12 @@ The incident was identified after:
 
 Potential impacts include:
 
-- [Impact 1]
-- [Impact 2]
-- [Impact 3]
+- Company security breached 
+- Confidentiality of data infiltrated 
+- Multiple emails exposed
 
-Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]**.
+Severity was assessed as **High** because **the adversaries phishing email can easily spread and compromise many employers** and has the potential to reach higher priveliged employers.
+The attacker has full access to emails that were accessed hence can view the companies private conversations and gain access to unauthorised information.
 
 ---
 
@@ -128,10 +142,9 @@ Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]
 
 ## Recommendations
 
-1. [Recommendation 1]
-2. [Recommendation 2]
-3. [Recommendation 3]
-4. [Recommendation 4]
+1. Train staff to be aware of social engineering and typical signs
+2. Always verify any links or buttons 
+3. Regularly update passwords and have MFA enabled 
 
 ---
 
@@ -139,9 +152,9 @@ Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]
 
 The incident highlights the importance of:
 
-- [Lesson 1]
-- [Lesson 2]
-- [Lesson 3]
+- Being aware of the contents of the email and checking it
+- Verifying sender address and any links 
+- Staff to be regularly trained in order to be aware of phishing attempt and what it generally looks like
 
 ---
 
@@ -151,16 +164,6 @@ The incident highlights the importance of:
 |------------|------------|
 | [Txxxx] | [Technique Name] |
 | [Txxxx] | [Technique Name] |
-
----
-
-## Evidence
-
-### Screenshot(s)
-
-![Investigation Evidence](../images/example.png)
-
-*Figure 1: [Description of evidence]*
 
 ---
 
