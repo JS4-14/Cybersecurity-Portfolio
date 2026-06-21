@@ -173,7 +173,6 @@ The incident highlights the importance of:
 
 - I focused too heavily on phishing indicators rather than the resulting account compromise.
 - Entering credentials does not prove compromise by itself; attacker activity provides stronger evidence.
-- The most significant impact was the ability of the attacker to send phishing emails internally.
 - The incident should be classified as account compromise caused by phishing rather than simply a phishing attempt.
 
 ### What I Learned
