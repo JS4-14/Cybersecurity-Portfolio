@@ -167,6 +167,24 @@ The incident highlights the importance of:
 
 ---
 
+## Reflection and Improvements
+
+### What I Missed Initially
+
+- I focused too heavily on phishing indicators rather than the resulting account compromise.
+- Entering credentials does not prove compromise by itself; attacker activity provides stronger evidence.
+- The most significant impact was the ability of the attacker to send phishing emails internally.
+- The incident should be classified as account compromise caused by phishing rather than simply a phishing attempt.
+
+### What I Learned
+
+- Differentiate between initial access and the resulting incident.
+- Distinguish supporting evidence from direct evidence.
+- Consider business impact, not just technical indicators.
+- Build a complete attack chain when analysing incidents.
+
+---
+
 ## Key Skills Demonstrated
 
 `Incident Response` `Threat Analysis` `Investigation` `Security Operations` `Log Analysis` `Risk Assessment`
