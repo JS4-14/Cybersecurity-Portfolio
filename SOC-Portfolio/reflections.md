@@ -4,4 +4,4 @@
 
 While researching this incident, I discovered the MITRE ATT&CK framework, which provides a standardised way of categorising attacker techniques and behaviours.
 
-I used ATT&CK mappings to understand how phishing attacks progress from initial access to account compromise and lateral targeting of other users.
+I used ATT&CK mappings to understand how phishing attacks progress from initial access to account compromise.
