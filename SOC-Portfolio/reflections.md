@@ -47,14 +47,16 @@ I used ATT&CK mappings to understand how phishing attacks progress from initial 
 
 ## Skills To Improve
 
-- ...
-- ...
-- ...
+- MITRE ATT&CK mapping
+- Confidence assessment
+- Distinguishing observations from evidence
 
 ---
 
 ## Questions To Research
 
-- ...
-- ...
-- ...
+- What does this tell me?
+- Could there be a legitimate explanation?
+- What evidence would strengthen or weaken my conclusion?
+- What would I search for next if I had access to the SIEM or EDR?
+- What action would I take immediately, and why?
