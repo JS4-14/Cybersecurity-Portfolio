@@ -53,10 +53,18 @@ I used ATT&CK mappings to understand how phishing attacks progress from initial 
 
 ---
 
-## Questions To Research
+## Analyst Questions
 
 - What does this tell me?
 - Could there be a legitimate explanation?
 - What evidence would strengthen or weaken my conclusion?
 - What would I search for next if I had access to the SIEM or EDR?
 - What action would I take immediately, and why?
+
+## Questions to research
+
+- How does Microsoft Defender detect malware?
+- What is EDR and how does it differ from antivirus?
+- How does reputation scoring work?
+- How does PowerShell execute malicious payloads?
+- What happens after malware establishes persistence?
