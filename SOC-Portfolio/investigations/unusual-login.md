@@ -1,10 +1,10 @@
-# SOC Incident Investigation: [Incident Name]
+# SOC Incident Investigation: Unusual Login Activity
 
 ## Executive Summary
 
-A suspicious security event was identified involving **[brief description]**.
+A suspicious security event was identified involving **unusual authentication activity with VPN use and failed login attemtps**.
 
-The investigation determined that **[finding]**.
+The investigation determined that **a third party succesfully authenticated to Microsoft 365 and established a PowerShell remote session leading to a SOC alert**.
 
 Immediate containment actions were recommended to reduce further risk.
 
@@ -14,11 +14,11 @@ Immediate containment actions were recommended to reduce further risk.
 
 | Field | Details |
 |--------|---------|
-| Incident Type | [Phishing / Malware / Account Compromise / Brute Force / Other] |
-| Severity | [Low / Medium / High / Critical] |
-| Status | [Open / Contained / Resolved] |
-| Detection Method | [User Report / Alert / Monitoring / Other] |
-| Affected Assets | [User Account, Workstation, Server, Email System, etc.] |
+| Incident Type | Unusual Login Activity |
+| Severity | Medium |
+| Status | Open |
+| Detection Method | SIEM Dashboard |
+| Affected Assets | User Account, HR-LAPTOP-014 |
 
 ---
 
@@ -26,9 +26,9 @@ Immediate containment actions were recommended to reduce further risk.
 
 The incident was identified after:
 
-- [Observation 1]
-- [Observation 2]
-- [Observation 3]
+- Three failed SMB logons to FS-01
+- Payroll.zip created
+- Outbound HTTPS - Destination was to unknown IP Address and unknown country
 
 ---
 
@@ -36,19 +36,22 @@ The incident was identified after:
 
 | Time | Event |
 |------|--------|
-| [Time] | [Event] |
-| [Time] | [Event] |
-| [Time] | [Event] |
-| [Time] | [Event] |
+| 08:11 | Successful VPN login from Manchester, UK |
+| 08:18 | Successful Microsoft 365 authentication |
+| 08:34 | Successful authentication to HR-APP01 |
+| 08:36 | PowerShell Remoting session established |
+|  08:39 | Three failed SMB logons to FS-01 |
+|  08:40 | Successful SMB authentication to FS-01 | 
+|  08:45 | Payroll.zip created |
+|  08:46 | Alert generated |
 
 ---
 
 ## Indicators of Compromise (IOCs)
 
-- [IOC 1]
-- [IOC 2]
-- [IOC 3]
-- [IOC 4]
+- Successful SMB authentication to FS-01 after 3 failed attempts 
+- Based on Endpoint Activity, PowerShell Remote initiated and a WinRM Session created with the destination to FS-01, a device not typically connected too
+- Authentication log: Payroll.zip created after connecting to FS-01
 
 ---
 
@@ -56,16 +59,16 @@ The incident was identified after:
 
 ### Evidence Supporting Compromise
 
-- [Evidence 1]
-- [Evidence 2]
-- [Evidence 3]
+- Based on the users typical login history, there is no prior authentication to FS-01, only to the users device (HR-LAPTOP-014/HR-APP01)
+- Network activity shows that the created file, payroll.zip was sent to a unknown device
+- User stated they logged in and opened some payroll documents however their device connected to another
 
 ### Alternative Explanations Considered
 
 | Possibility | Reason Ruled Out |
 |------------|------------------|
-| [Alternative Explanation] | [Reason] |
-| [Alternative Explanation] | [Reason] |
+| Malware | Endpoint Protection indicates no malware was detected |
+| Form of Trojan or phishing | Antivirus did not generate an alert indicating it was not a form of malware or virus |
 
 ---
 
@@ -73,11 +76,16 @@ The incident was identified after:
 
 ### What Happened?
 
-[Describe the sequence of events.]
+[User Statement: "I logged in this morning like normal and opened some payroll documents. I wasn't aware anything unusual happened." ] 
+The authentication logs indicate that there was a login from Manchester with a VPN, followed by a successful Microsoft 365 authentication. 
+There was then a connection to the users laptop and a PowerShell session established.
+Logs caught 3 failed attempts to the unknown device - FS-01 until a connection was finally established.
+Payroll.zip was created and the SIEM alert was then generated.
 
 ### How Was It Detected?
 
-[Explain how the suspicious activity was identified.]
+Detection was primiarly due to the SIEM alert with inidicators also being observed in the login history, endpoint activity, file activity and network activity which all potentiallly contributed to the alert being generated.
+Other evidence could include Firewall logs, Sysmon logs and Active Directory Audit logs.
 
 ### Why Is It Suspicious?
 
