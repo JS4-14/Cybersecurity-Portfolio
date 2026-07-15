@@ -68,3 +68,26 @@ I used ATT&CK mappings to understand how phishing attacks progress from initial 
 - How does reputation scoring work?
 - How does PowerShell execute malicious payloads?
 - What happens after malware establishes persistence?
+
+
+
+
+# SOC REPORT 3: UNUSUAL LOGIN ACTIVITY
+
+## What I did well
+
+- Compared to Report 2:
+    
+    - I looked at multiple sources of evidence instead of only focusing on one 
+    - I started to consider logs anf determining their implications 
+    
+---
+
+## Mistakes I Made
+
+- I treated every event equally rather than asking myself which events changed my understanding of the incident 
+- I slipped back into conclusions mentioning a 
+3rd party 
+- I drew to a conclusion to quick when it came to Alternate Explanations, ruling out too quick
+
+
