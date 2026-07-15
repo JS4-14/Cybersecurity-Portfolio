@@ -82,6 +82,8 @@ There was then a connection to the users laptop and a PowerShell session establi
 Logs caught 3 failed attempts to the unknown device - FS-01 until a connection was finally established.
 Payroll.zip was created and the SIEM alert was then generated.
 
+Login --> M365 Authentication --> Laptop Connection Established --> PowerShell Session Established --> 3 Failed Login Attempts --> FS-01 Successfully Connected too --> Payroll.zip created --> SIEM Alert
+
 ### How Was It Detected?
 
 Detection was primiarly due to the SIEM alert with inidicators also being observed in the login history, endpoint activity, file activity and network activity which all potentiallly contributed to the alert being generated.
@@ -89,27 +91,23 @@ Other evidence could include Firewall logs, Sysmon logs and Active Directory Aud
 
 ### Why Is It Suspicious?
 
-[Explain the evidence and reasoning.]
+Multiple logs indicate to suspicious activity and the users login history is a huge factor causing reason for suspicion.
 
 ### Likely Attacker Objective
 
-- [Credential Theft]
-- [Malware Delivery]
-- [Persistence]
-- [Privilege Escalation]
-- [Data Exfiltration]
-- [Lateral Movement]
-- [Other]
+- Credential Theft
+- Data Exfiltration
+- Lateral Movement
 
 ---
 
 ## Confidence Assessment
 
-**Confidence Level:** [High / Medium / Low]
+**Confidence Level:** Medium
 
 **Reason:**
 
-[Explain how confident you are in your findings and identify any assumptions.]
+I'm confident in my findings and assumptions based on the evidence and logs at hand however struggle to understand what the adversaries goals and target was, why they connected to an employees device but then struggled to login to a third party device in an unknown IP area. 
 
 ---
 
@@ -117,26 +115,24 @@ Other evidence could include Firewall logs, Sysmon logs and Active Directory Aud
 
 Potential impacts include:
 
-- [Impact 1]
-- [Impact 2]
-- [Impact 3]
+- System has a hidden vulnerability that the adversary abused to their advantage  
+- Payroll.zip was a zip file hence multiple files may have been zipped so confidentiality has been exposed. 
 
-Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]**.
+Severity was assessed as **High** because **zip file was sent and difficult to determine what data was transmitted**.
 
 ---
 
 ## Containment Actions
 
-- [Action 1]
-- [Action 2]
-- [Action 3]
-- [Action 4]
+- Correctly configure firewall rules 
+- Check logs to determine what files where zipped together in order to figure out what data was sent
+- Isolate the laptop involved in the incident to prevent further damage 
 
 ---
 
 ## Recommendations
 
-1. [Recommendation 1]
+1. Principle of Least Privilege - Powershell and WinRM, this should not have ran unless the feature was needed by the company, if PowerShell was restricted the scenario would not have played out
 2. [Recommendation 2]
 3. [Recommendation 3]
 4. [Recommendation 4]
@@ -147,9 +143,9 @@ Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]
 
 The incident highlights the importance of:
 
-- [Lesson 1]
-- [Lesson 2]
-- [Lesson 3]
+- Ensuring firewall rules are up to date and allowlisting certain IP addresses
+- Principle of Least Privilege
+
 
 ---
 
@@ -157,21 +153,8 @@ The incident highlights the importance of:
 
 | Technique | Description |
 |------------|------------|
-| [Txxxx] | [Technique Name] |
-| [Txxxx] | [Technique Name] |
+| T1078 | Valid Accounts |
+| T1021 | Remote Services (Lateral Movement) |
 
----
-
-## Evidence
-
-### Screenshot(s)
-
-![Investigation Evidence](../images/example.png)
-
-*Figure 1: [Description of evidence]*
-
----
-
-## Key Skills Demonstrated
 
 `Incident Response` `Threat Analysis` `Investigation` `Security Operations` `Log Analysis` `Risk Assessment`
