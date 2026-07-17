@@ -64,8 +64,7 @@ This file type is a primary vector for cyber attacks and this is a potential pro
 ### Evidence Supporting Compromise
 
 - Once the .ps1 file was created, there was a Windows Security Log, Event ID 4104 which proves the adversary broke into the device using PowerShell (a trusted program) to avoid detection.
-DownloadString and IEX indicates they obtained a set of bad instructions from the internet and it was NOT saved to the hdd hence why the antivirus did not flag anything.
-Those instructions were than ran in memory
+DownloadString retrieved remote PowerShell code, while Invoke-Expression executed it directly in memory without writing a traditional executable to diskThose instructions were than ran in memory
 - The senders address is "finance-notification@invoice-review.com", this address is basic and untrustworthy since it does not include the company name or department name which can indicate the email is potentially coming from outside the company since its a generic address to try persuade the user its invoice / financial based. The user also mentioned the file asked to enable editing to *view* the content however the contents of word files can be viewed without needing to enable editing since they are two different operations - this shows suspicious activity going on 
 - [Evidence 3]
 
@@ -86,7 +85,7 @@ The user received an email with a supposed "invoice" .docm attachment. The user 
 
 ### How Was It Detected?
 
-The attack was detected by Endpoint Protection when a behaviour-based detection was generated which proves suspicious and irregular behaviour patterns were occuring on the affected device where these events would not happen if the device/user behaviour was normal.
+The attack was detected by Endpoint Protection when a behaviour-based detection was generated which signifies suspicious and irregular behaviour patterns were occuring on the affected device where these events would not happen if the device/user behaviour was normal.
 
 ### Why Is It Suspicious?
 
