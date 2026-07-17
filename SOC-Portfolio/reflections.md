@@ -1,93 +1,139 @@
-# SOC REPORT 1: PHISHING
+# SOC Investigation Reflections
 
-
-## New Concepts Learned
-
-### MITRE ATT&CK Framework
-
-While researching this incident, I discovered the MITRE ATT&CK framework, which provides a standardised way of categorising attacker techniques and behaviours.
-
-I used ATT&CK mappings to understand how phishing attacks progress from initial access to account compromise.
-
-
-
-# SOC REPORT 2: MALWARE
-
-## What I Did Well
-
-- Included MITRE ATT&CK - previously i was unaware of the concept during the Phishing report writeup
-- Started to think about the chain of events rather than stating what happened
-- Started to think about potential alternative possibilities compared to report 1 (phishing)
+This document records how my investigation methodology has evolved across each simulated SOC incident. The aim is not only to improve technical knowledge, but to improve the reasoning process used during incident investigations.
 
 ---
 
-## Mistakes I Made
+# Report 1 — Phishing
 
-- I confuse IOCs with evidence. Not everything observed is an IOC - detection events indicate something happened whereas IOCs are things other analysts could search for
-- Stated something occured despite the evidence not fully supporting / not substantial
-- I still describe events rather than explaining why events matter - an analyst explains that 
+## New Concepts
 
----
+- Discovered the MITRE ATT&CK framework and began using it to classify attacker behaviour.
+- Learned that an incident report should explain why evidence matters, not simply list observations.
 
-## What I Learnt
+## Initial Weaknesses
 
-- Recommendations should prevent recurrence so I cannot include vague things such as "train staff" but rather "Implement Firewall rules allowlisting certain IPs" etc.
-- No assumptions, i should identify.
-- My reports would be better with more analyst thinking - i need to ask myself questions to help build a high quality report
+- Focused mainly on describing events.
+- Jumped to conclusions without clearly separating observations from assumptions.
+- Had limited understanding of how analysts justify confidence levels.
 
----
+## Key Takeaway
 
-## How I Would Investigate This Differently Next Time
-
-- Ask myself questions to develop my reasoning rather than stating the obvious and describing whats already known
-- Ensure i understand the difference between evidence and IOCs
-- Not assuming and avoiding certainty unless supported as a SOC analyst would
+A SOC report should explain **why** evidence supports a conclusion, not simply describe what happened.
 
 ---
+
+# Report 2 — Malware
+
+## Improvements
+
+- Began analysing attack progression rather than isolated events.
+- Started considering alternative explanations before reaching a conclusion.
+- Incorporated ATT&CK mappings more naturally.
+
+## Mistakes
+
+- Confused Indicators of Compromise (IOCs) with investigation evidence.
+- Sometimes stated conclusions that were not fully supported.
+- Recommendations were often generic rather than directly addressing root causes.
+
+## What I Learned
+
+Evidence answers:
+
+> "Why do I believe this?"
+
+IOCs answer:
+
+> "What could another analyst search for?"
+
+Those are different purposes.
 
 ## Skills To Improve
 
-- MITRE ATT&CK mapping
 - Confidence assessment
-- Distinguishing observations from evidence
+- ATT&CK mapping
+- Evidence evaluation
+- Root-cause based recommendations
 
 ---
 
-## Analyst Questions
+# Report 3 — Unusual Login Activity
 
-- What does this tell me?
-- Could there be a legitimate explanation?
-- What evidence would strengthen or weaken my conclusion?
-- What would I search for next if I had access to the SIEM or EDR?
-- What action would I take immediately, and why?
+## Improvements
 
-## Questions to research
+- Began correlating multiple log sources instead of analysing events individually.
+- Started identifying which events were actually significant.
+- Considered alternative hypotheses before selecting the most likely explanation.
 
-- How does Microsoft Defender detect malware?
-- What is EDR and how does it differ from antivirus?
-- How does reputation scoring work?
-- How does PowerShell execute malicious payloads?
-- What happens after malware establishes persistence?
+## Mistakes
 
+- Treated every event as equally important.
+- Still occasionally assumed attacker involvement before sufficient evidence existed.
+- Needed stronger reasoning linking authentication events together.
 
+## Key Takeaway
 
+Not every log entry matters equally.
 
-# SOC REPORT 3: UNUSUAL LOGIN ACTIVITY
+The analyst's job is identifying which events change the understanding of the incident.
 
-## What I did well
-
-- Compared to Report 2:
-    
-    - I looked at multiple sources of evidence instead of only focusing on one 
-    - I started to consider logs anf determining their implications 
-    
 ---
 
-## Mistakes I Made
+# Report 4 — Suspicious PowerShell Execution
 
-- I treated every event equally rather than asking myself which events changed my understanding of the incident 
-- I slipped back into conclusions mentioning a 
-3rd party 
-- I drew to a conclusion to quick when it came to Alternate Explanations, ruling out too quick
+## Improvements
 
+- Investigated a significantly more realistic enterprise attack chain.
+- Considered attacker techniques such as LOLBins, PowerShell abuse and in-memory execution.
+- Began relating endpoint, Windows, Sysmon and network telemetry together.
 
+## Mistakes
+
+- Relied on internet research to understand unfamiliar PowerShell behaviour.
+- Sometimes explained technical concepts incorrectly.
+- Included assumptions that extended beyond available evidence.
+- Recommendations occasionally focused on symptoms instead of preventing the attack chain.
+
+## Key Takeaway
+
+The hardest part of SOC work is not recognising malicious activity.
+
+It is understanding exactly what the evidence proves—and equally importantly—what it does **not** prove.
+
+---
+
+# Overall Development
+
+Across these investigations I noticed my thinking change from:
+
+Describe events
+
+↓
+
+Interpret evidence
+
+↓
+
+Evaluate competing explanations
+
+↓
+
+Build evidence-supported conclusions
+
+I still have significant room for improvement, particularly in enterprise Windows environments, PowerShell abuse, Active Directory and detection engineering, but these reports have shown me where those gaps exist.
+
+---
+
+# Questions I Continue Asking During Every Investigation
+
+- What actually happened?
+- What evidence proves that?
+- What assumptions am I making?
+- What alternative explanations exist?
+- What evidence would increase or decrease my confidence?
+- What would I investigate next if I had access to the SIEM or EDR?
+- Which ATT&CK techniques best explain the observed behaviour?
+- How would I prevent this attack from succeeding again?
+
+These questions now guide every investigation I perform.
