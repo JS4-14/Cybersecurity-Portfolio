@@ -72,7 +72,7 @@ DownloadString retrieved remote PowerShell code, while Invoke-Expression execute
 
 | Possibility | Reason Ruled Out |
 |------------|------------------|
-| Ransomware | This is not ransomware since the attack was highly advanced and undetected which most likely indicates the attacker has ulterior motives whether its stealing data or moving laterally |
+| Ransomware | No ransom note, no encryption |
 | Standard Phishing | PowerShell was used for the attack through the .docm file the user opened. This cannot be phishing since a trusted program was used for the attack rather than trying to obtain credentials through fake links, this is more likely to be a malware attack |
 
 ---
