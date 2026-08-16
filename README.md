@@ -1,6 +1,6 @@
 # Cybersecurity Foundations
 
-Hands-on cybersecurity projects, investigations, and CTF work — Johaan (Conq) Shiju, BSc Cybersecurity, Aston University.
+Hands-on cybersecurity projects, investigations, and CTF work — BSc Cybersecurity, Aston University.
 
 ## Projects
 
