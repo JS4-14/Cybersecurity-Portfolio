@@ -14,4 +14,4 @@ Hands-on cybersecurity projects, investigations, and CTF work — BSc Cybersecur
 
 ## Background Learning
 
-- [Google Cybersecurity Certificate Notes](study-notes/google-cybersecurity-cert) — coursework notes
+- [Google Cybersecurity Certificate Notes](google-cybersecurity-cert) — coursework notes
