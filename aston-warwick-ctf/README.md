@@ -2,11 +2,9 @@
 
 ## Overview
 
-I participated in an university Capture The Flag (CTF) competition hosted by Aston University and Warwick University student societies.
+Team CTF competition hosted by Aston and Warwick University cybersecurity societies. Working as part of an Aston team, we placed **3rd of 5–7 teams overall — the only Aston University team to finish on the podium.**
 
-Working as part of a team, we were the **highest performing Aston team**
-
-The competition consisted of practical cybersecurity challenges covering multiple domains, requiring technical investigation, analytical thinking and teamwork under time pressure.
+The competition covered practical challenges across digital forensics, cryptography, steganography, OSINT, and general problem-solving, scored on a decaying-points system (each challenge was worth less the more teams solved it) — which rewarded prioritisation and speed as much as accuracy.
 
 ---
 
@@ -41,24 +39,17 @@ Worked through logic-based and unconventional problems requiring creative proble
 
 ---
 
-## My Contribution 
+## My Contribution
 
-During the competition I worked on challenges involving:
-
- - Cryptography tasks 
- - File and metadata analysis
- - Steganography challenges 
- - Linux Command Line
+During the competition I worked on: cryptography tasks, file and metadata analysis, steganography challenges, and Linux command-line investigation.
 
 ---
 
-## Key Challenges Encountered
+## Key Challenges
 
-### Audio Analysis
-Certain challenges involved analysing audio files and identifying hidden patterns to recover information 
+**Audio steganography** — several challenges required analysing audio files for hidden patterns, which meant learning to read and interpret them under time pressure rather than relying on tools I already knew well.
 
-### Time-Constrained Problem Solving
-The competition rewarded efficient investigation and prioritisation of tasks and the points rewarded for each task decreased as more people solved them
+**Time-constrained scoring** — points decreased as more teams solved a challenge, so deciding which challenges to attempt first mattered as much as solving them correctly.
 
 ---
 
@@ -72,32 +63,6 @@ Analysing evidence proved more effective than randomly testing tools and techniq
 
 ### 🔒 Practical Cybersecurity Differs From Theory
 The competition provided hands-on experience applying concepts from cryptography, forensics and steganography in realistic scenarios.
-
-### 📈 Continuous Learning
-The event highlighted areas I want to explore further, particularly digital forensics and incident investigation.
-
----
-
-## Results
-
-🏅 **Only Aston University team on the podium**
-
-🏅 Practical exposure to:
-- Digital Forensics
-- Cryptography
-- Steganography
-- OSINT
-- Linux Investigation Techniques
-
----
-
-## Evidence
-
-This repository contains documentation related to the event, including:
-
-- Competition announcement
-- Event materials
-- Supporting documentation provided by organisers
 
 ---
 
