@@ -1,4 +1,4 @@
-# Cybersecurity Foundations
+# Cybersecurity Portfolio
 
 Hands-on cybersecurity projects, investigations, and CTF work — BSc Cybersecurity, Aston University.
 
