@@ -45,5 +45,20 @@ I tried fixing this issue by using a custom pipeline and pointing query_table at
 Error 2: `Invalid SigmaDetectionItem field name encountered: TargetImage`
 Sentinel ingests Windows logs 2 ways - raw (XML dumped into `EventData/ParameterXml`, no named columns) or parsed (DCR extracts fields like `TargetImage` into real columns) 
 
+## Finding 2: Splunk
+
+Command: sigma convert -t splunk -p splunk_windows lsass_credential_access.yml
 
 ```
+source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
+TargetImage="C:\Windows\System32\lsass.exe"
+GrantedAccess IN ("0x1010", "0x1410", "0x143a", "0x40", "0x1fffff")
+NOT (SourceImage IN ("*\MsMpEng.exe", "C:\Windows\System32\taskmgr.exe"))
+```
+
+Why it worked: Splunk's Windows/Sysmon pipeline maps Sigma's neutral field names directly
+I found out Splunk has 2 `IN` behaviours: 
+- Search-command `IN` supports wildcards
+- eval/where IN() function *doesn't* support wildcards - strict equality
+
+The `*\MsMpEng.exe` wildcard only worked because it landed in the search-command `IN` behaviour.
