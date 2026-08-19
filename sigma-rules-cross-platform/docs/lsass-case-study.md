@@ -62,3 +62,13 @@ I found out Splunk has 2 `IN` behaviours:
 - eval/where IN() function *doesn't* support wildcards - strict equality
 
 The `*\MsMpEng.exe` wildcard only worked because it landed in the search-command `IN` behaviour.
+
+
+## Finding 3 & 4: Telemetry capture
+
+When i first tried dumping, EID 10 alert was generated in Sysmon: 
+- SourceImage: taskmgr.exe
+- GrantedAccess: 0x1400 / 0x3200
+The rule did not fire an alert correctly since 0x1400 wasn't part of the 5 selection values in my sigma rule. This means selection is False on its own hence never reaches the filters (filter_taskmgr was never reached)
+
+The second time i tried, 
