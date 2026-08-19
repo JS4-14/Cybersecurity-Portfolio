@@ -49,7 +49,7 @@ The incident was identified after:
 
 ## Indicators of Compromise (IOCs)
 
-- Based on the email, the user recieved an attachment appearing to be their payment schedule however the attachment was a .docm file type. This is the first IOC since a .docm filetype has macro support which means it allows the creator to execute code - .docm are common vectors for malware and viruses.
+- Based on the email, the user received an attachment appearing to be their payment schedule however the attachment was a .docm file type. This is the first IOC since a .docm filetype has macro support which means it allows the creator to execute code - .docm are common vectors for malware and viruses.
 The attackers goal could have been to infiltrate the system with an unsuspecting word doc file and execute several commands whether its to exfiltrate data, lateral movement or privilege escalation.
 - The Firewall Logs also exposes an IOC, there was an outbound HTTPS connection allowed to an unknown IP destination on port 443
 Here the attackers goal could have been to transmit data from the affected device to their personal device or alternate device (ransom or sell the data).
@@ -85,11 +85,11 @@ The user received an email with a supposed "invoice" .docm attachment. The user 
 
 ### How Was It Detected?
 
-The attack was detected by Endpoint Protection when a behaviour-based detection was generated which signifies suspicious and irregular behaviour patterns were occuring on the affected device where these events would not happen if the device/user behaviour was normal.
+The attack was detected by Endpoint Protection when a behaviour-based detection was generated which signifies suspicious and irregular behaviour patterns were occurring on the affected device where these events would not happen if the device/user behaviour was normal.
 
 ### Why Is It Suspicious?
 
-WHat made the event suspicious was the editing permissions being asked to view content, then multiple logs being observed
+What made the event suspicious was the editing permissions being asked to view content, then multiple logs being observed
 
 ### Likely Attacker Objective
 
