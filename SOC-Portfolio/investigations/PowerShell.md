@@ -81,7 +81,7 @@ DownloadString retrieved remote PowerShell code, while Invoke-Expression execute
 
 ### What Happened?
 
-The user received an email with a supposed "invoice" .docm attachment. The user enabled permissions and shortly after PowerShell started and executed, establishing a network connection likely from the instructions  within the .exe file of .docm. All logs indicate multiple events occuring in cohesion which means all the events are related. The attacker had hidden code which executed once the file had editing permissions consequently causing instructions to be downloaded and ran on the device itself under the radar (Start-Sleep), there was then DNS lookups and connections being made as observed in the Firewall Logs
+The user received an email with a supposed "invoice" .docm attachment. The user enabled permissions and shortly after PowerShell started and executed, establishing a network connection likely from the instructions  within the .exe file of .docm. All logs indicate multiple events occurring in cohesion which means all the events are related. The attacker had hidden code which executed once the file had editing permissions consequently causing instructions to be downloaded and ran on the device itself under the radar (Start-Sleep), there was then DNS lookups and connections being made as observed in the Firewall Logs
 
 ### How Was It Detected?
 
@@ -107,7 +107,7 @@ What made the event suspicious was the editing permissions being asked to view c
 
 **Reason:**
 
-There was a registry run key modified but no privilege level was confirmed and nothing about processes execution menntioned, hence my confidence level remains medium. The only evidence indicating it could be malicious is the timing of events, the registry key was modified a few minutes after a network connection was established and powershell was spawned hence the chain of events can indicate malicious intent.
+There was a registry run key modified but no privilege level was confirmed and nothing about processes execution mentioned, hence my confidence level remains medium. The only evidence indicating it could be malicious is the timing of events, the registry key was modified a few minutes after a network connection was established and powershell was spawned hence the chain of events can indicate malicious intent.
 
 ---
 
