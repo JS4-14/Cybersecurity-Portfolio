@@ -31,3 +31,7 @@ detection:
     SourceImage: 'C:\Windows\System32\taskmgr.exe'
   condition: selection and not (filter_defender or filter_taskmgr)
 ```
+
+`GrantedAccess` is how a detection engineer can differentiate between a normal request and a malicious request. The `SourceImage` may not be a inherently suspicious itself but rather the access rights requested - that is what determines malicious intent.     
+
+```
