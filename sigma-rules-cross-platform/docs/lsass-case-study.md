@@ -34,4 +34,16 @@ detection:
 
 `GrantedAccess` is how a detection engineer can differentiate between a normal request and a malicious request. The `SourceImage` may not be a inherently suspicious itself but rather the access rights requested - that is what determines malicious intent.     
 
+## Finding 1: Sentinel/KQL Failure
+
+I attempted to convert my sigma rule from YAML into Sentinel/KQL.
+Tools: sigma-cli + pysigma-backend-kusto, pipeline azure_monitor_pipeline
+
+Error 1: `Unable to determine table name for category: process_access` the pipeline had no table mapping for this sigma category
+I tried fixing this issue by using a custom pipeline and pointing query_table at generic Event table.
+
+Error 2: `Invalid SigmaDetectionItem field name encountered: TargetImage`
+Sentinel ingests Windows logs 2 ways - raw (XML dumped into `EventData/ParameterXml`, no named columns) or parsed (DCR extracts fields like `TargetImage` into real columns) 
+
+
 ```
