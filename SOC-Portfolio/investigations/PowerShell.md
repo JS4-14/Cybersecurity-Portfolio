@@ -103,11 +103,11 @@ What made the event suspicious was the editing permissions being asked to view c
 
 ## Confidence Assessment
 
-**Confidence Level:** [High / Medium / Low]
+**Confidence Level:** Medium 
 
 **Reason:**
 
-[Explain how confident you are in your findings and identify any assumptions.]
+There was a registry run key modified but no privilege level was confirmed and nothing about processes execution menntioned, hence my confidence level remains medium. The only evidence indicating it could be malicious is the timing of events, the registry key was modified a few minutes after a network connection was established and powershell was spawned hence the chain of events can indicate malicious intent.
 
 ---
 
@@ -115,11 +115,11 @@ What made the event suspicious was the editing permissions being asked to view c
 
 Potential impacts include:
 
-- Data exfiltration - private data was accessed through the victims device and transmitted to another device/IP for personal or financial gain
-- [Impact 2]
-- [Impact 3]
+- Data exfiltration - Private data was accessed through the victims device and transmitted to another device/IP for personal or financial gain
+- This could have the scope to establish lateral movement - the attacker could spread their reach to other devices 
+- Persistence - The malware could survive, having potentially edited a register, it could remain within the system despite reboot 
 
-Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]**.
+Severity was assessed as **Medium** because **the likelihood of a register being edited is unknown but the impact can be high** and there are other IOCs that argues for malware infiltration hence the assessment.
 
 ---
 
@@ -127,8 +127,8 @@ Severity was assessed as **[Low / Medium / High / Critical]** because **[reason]
 
 - Block outbound connections
 - Terminate the powershell session
-- [Action 3]
-- [Action 4]
+- Isolate the device and its networks to prevent internal spread 
+- Flag the incident so others do not fall for the email 
 
 ---
 
