@@ -2,9 +2,9 @@
 
 ## Executive Summary
 
-A suspicious security event was identified involving **unusual authentication activity with VPN use and failed login attemtps**.
+A suspicious security event was identified involving **unusual authentication activity with VPN use and failed login attempts**.
 
-The investigation determined that **a third party succesfully authenticated to Microsoft 365 and established a PowerShell remote session leading to a SOC alert**.
+The investigation determined that **a third party successfully authenticated to Microsoft 365 and established a PowerShell remote session leading to a SOC alert**.
 
 Immediate containment actions were recommended to reduce further risk.
 
