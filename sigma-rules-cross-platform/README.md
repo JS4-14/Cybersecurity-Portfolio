@@ -6,15 +6,22 @@ Vendor-agnostic detection rules written in Sigma and validated for cross-platfor
 
 Detection logic written once, in Sigma's field-name format, should be portable across SIEMs without rewriting the logic per platform. This repo tests that claim directly: every rule here has been run through at least two backend conversions, and the conversion failures are documented as findings.
 
-## Rules
-
-| Rule | Technique | Status | Case study |
-|---|---|---|---|
-| [`lsass_credential_access.yml`](lsass_credential_access.yml) | T1003.001 (LSASS Credential Access) | Solo-built, field-verified, Splunk-validated | [Full write-up](docs/lsass-case-study.md) |
+| Rule | Technique | Status |
+|---|---|---|
+| `lsass_credential_access.yml` | T1003.001 — LSASS Credential Access | Validated (KQL blocked/documented, SPL clean, real-telemetry for all 3 logic paths) |
+| `mshta.yml` | T1218.005 — Mshta | In progress |
 
 ## What "validated" means here
 
-A rule isn't marked validated because it converts without error. Each rule's filter logic is manually traced against both real captured telemetry and synthetic test cases specifically constructed to exercise every branch of the condition — including filters that a real capture might bypass without actually testing. See the [LSASS case study](docs/lsass-case-study.md) for a worked example of this.
+A rule isn't marked validated just because it converts cleanly or passes a hand-built test case. For LSASS credential access (T1003.001), every logical path through the rule is backed by real captured telemetry, not synthetic data:
+
+| Path | What it proves | Validated by |
+|---|---|---|
+| False-negative | Benign background access to LSASS doesn't fire | Real telemetry |
+| Suppression | A trusted-source access attempt shaped like a true positive (Task Manager's own dump feature) is correctly excluded | Real telemetry |
+| Detection | An untrusted-source malicious access attempt (ProcDump, `PROCESS_ALL_ACCESS`) correctly fires | Real telemetry |
+
+Early in validation, a synthetic test case (`GrantedAccess: 0x1fffff` from `taskmgr.exe`, hand-constructed) confirmed the suppression filter was internally consistent. That's a real result, but it only proves the rule agrees with itself — it doesn't prove the logic holds up against an actual tool. The rule wasn't called fully validated until each path had a real, independently-generated event behind it. Full write-up: [`docs/lsass-case-study.md`](docs/lsass-case-study.md).
 
 ## Key cross-platform findings
 
