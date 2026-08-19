@@ -1,6 +1,6 @@
 # Sigma Detection Rulepack
 
-Vendor based detection rules written in Sigma and validated for cross-platform conversion (Sentinel/KQL, Splunk/SPL). Each rule is built, converted, and manually trace-through validated.
+Vendor-agnostic detection rules written in Sigma and validated for cross-platform conversion (Sentinel/KQL, Splunk/SPL). Each rule is built, converted, and manually trace-through validated.
 
 ## Why Sigma
 
