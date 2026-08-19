@@ -6,7 +6,8 @@
 ## The problem
 
 LSASS.exe contains credentials such as NTLM hashes, kerberos tickets and plaintext passwords in memory. Mimikatz-class tools are used by attackers for credential dumping (T1003.001).
-Sysmon Event ID 10 fires an alert when process A opens a handle to the memory of another process (process B). The access rights requested is logged in the GrantedAccess field of the alert. 
+- Sysmon Event ID 10 fires an alert when process A opens a handle to the memory of another process (process B). The access rights requested is logged in the GrantedAccess field of the alert. 
+
 This is where the issue is, there are genuine Microsoft binary signed programs and services that request access to lsass such as task manager and antiviruses - there needs to be a rule which can differentiate reputable software from illegitimate software.
 
 ## The Rule
