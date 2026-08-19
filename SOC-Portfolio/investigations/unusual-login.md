@@ -118,7 +118,7 @@ Potential impacts include:
 - System has a hidden vulnerability that the adversary abused to their advantage  
 - Payroll.zip was a zip file hence multiple files may have been zipped so confidentiality has been exposed. 
 
-Severity was assessed as **High** because **zip file was sent and difficult to determine what data was transmitted**.
+Severity was assessed as **Medium** because **zip file was sent and difficult to determine what data was transmitted**.
 
 ---
 
