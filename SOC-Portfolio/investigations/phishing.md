@@ -124,7 +124,7 @@ Potential impacts include:
 - Confidentiality of data infiltrated 
 - Multiple emails exposed
 
-Severity was assessed as **High** because **the adversaries phishing email can easily spread and compromise many employers** and has the potential to reach higher priveliged employers.
+Severity was assessed as **High** because **the adversaries phishing email can easily spread and compromise many employers** and has the potential to reach higher privileged employers.
 The attacker has full access to emails that were accessed hence can view the companies private conversations and gain access to unauthorised information.
 
 ---
