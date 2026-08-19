@@ -51,8 +51,8 @@ The incident was identified after:
 
 - Based on the email, the user received an attachment appearing to be their payment schedule however the attachment was a .docm filetype. This is the first IOC since a .docm filetype has macro support which means it allows the creator to execute code - .docm are common vectors for malware and viruses.
 The attackers goal could have been to infiltrate the system with an unsuspecting word doc file and execute several commands whether its to exfiltrate data, lateral movement or privilege escalation.
-- The Firewall Logs also exposes an IOC, there was an outbound HTTPS connection allowed to an unknown IP destination on port 443
-Here the attackers goal could have been to transmit data from the affected device to their personal device or alternate device (ransom or sell the data).
+- The Firewall Logs also exposes an IOC, there was an outbound HTTPS connection allowed to an unknown IP destination on port 443.
+  Here the attackers goal could have been to transmit data from the affected device to their personal device or alternate device (ransom or sell the data).
 - Endpoint Protection generated a behaviour based detection alert. This means the system identified an activity or pattern that significantly deviates from the established "normal" behaviour of the user / device.
 - EDR timeline shows that update.ps1 was created, this is a Windows Powershell Script file indicating compromise since Event ID 4104 of the Windows Security Logs shows "Invoke-WebRequest", this is typical behaviour of .ps1 files where they attempt to download files from the internet (Invoke-WebRequest).
 This file type is a primary vector for cyber attacks and this is a potential probable cause of the behaviour based detection, the attacker potentially wants to run a malicious script or an automated script to scrape for data or execute certain tasks.
@@ -64,9 +64,9 @@ This file type is a primary vector for cyber attacks and this is a potential pro
 ### Evidence Supporting Compromise
 
 - Once the .ps1 file was created, there was a Windows Security Log, Event ID 4104 which proves the adversary broke into the device using PowerShell (a trusted program) to avoid detection.
-DownloadString retrieved remote PowerShell code, while Invoke-Expression executed it directly in memory without writing a traditional executable to diskThose instructions were than ran in memory
-- The senders address is "finance-notification@invoice-review.com", this address is basic and untrustworthy since it does not include the company name or department name which can indicate the email is potentially coming from outside the company since its a generic address to try persuade the user its invoice / financial based. The user also mentioned the file asked to enable editing to *view* the content however the contents of word files can be viewed without needing to enable editing since they are two different operations - this shows suspicious activity going on 
-- [Evidence 3]
+DownloadString retrieved remote PowerShell code, while Invoke-Expression executed it directly in memory without writing a traditional executable to the disk. Those instructions were than ran in memory.
+- The senders address is "finance-notification@invoice-review.com", this address is basic (templated to invoice) and untrustworthy since it does not include the company name or department name or any personalisation which can indicate the email is potentially coming from outside the company since its a generic address to try persuade the user its invoice related. The user also mentioned the file asked to enable editing to *view* the content however the contents of word files can be viewed *without needing to enable editing* since they are two different operations - this shows suspicious activity going on 
+- There was a registry run key modified. 
 
 ### Alternative Explanations Considered
 
