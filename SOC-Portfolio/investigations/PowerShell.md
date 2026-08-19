@@ -49,7 +49,7 @@ The incident was identified after:
 
 ## Indicators of Compromise (IOCs)
 
-- Based on the email, the user received an attachment appearing to be their payment schedule however the attachment was a .docm file type. This is the first IOC since a .docm filetype has macro support which means it allows the creator to execute code - .docm are common vectors for malware and viruses.
+- Based on the email, the user received an attachment appearing to be their payment schedule however the attachment was a .docm filetype. This is the first IOC since a .docm filetype has macro support which means it allows the creator to execute code - .docm are common vectors for malware and viruses.
 The attackers goal could have been to infiltrate the system with an unsuspecting word doc file and execute several commands whether its to exfiltrate data, lateral movement or privilege escalation.
 - The Firewall Logs also exposes an IOC, there was an outbound HTTPS connection allowed to an unknown IP destination on port 443
 Here the attackers goal could have been to transmit data from the affected device to their personal device or alternate device (ransom or sell the data).
