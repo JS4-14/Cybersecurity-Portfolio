@@ -1,0 +1,28 @@
+title: Suspicious Mshta Execution
+id: 6f80218a-f84f-4e4a-b2b4-9e92cd310905
+status: experimental
+description: Detects suspicious attempts of using mshta.exe to access remote URLs or executing inline scripts. Mshta is to execute HTML Applications.
+references:
+    - "https://attack.mitre.org/techniques/T1218/005/"
+author: Johaan
+date: 2026-08-19
+tags:
+    - attack.t1218.005
+    - attack.defense_evasion
+logsource:
+    service: sysmon
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image: C:\Windows\System32\mshta.exe
+        CommandLine|contains:
+            - "http://"
+            - "https://"
+            - "vbscript:"
+            - "javascript:"
+            - "about:"
+    condition: selection
+falsepositives:
+    - None known
+level: high
