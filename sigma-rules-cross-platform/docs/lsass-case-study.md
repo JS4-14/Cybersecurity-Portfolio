@@ -6,7 +6,7 @@
 ## The problem
 
 LSASS.exe contains credentials such as NTLM hashes, kerberos tickets and plaintext passwords in memory. Mimikatz-class tools are used by attackers for credential dumping (T1003.001).
-- Sysmon Event ID 10 fires an alert when process A opens a handle to the memory of another process (process B). The access rights requested is logged in the GrantedAccess field of the alert. 
+    - Sysmon Event ID 10 fires an alert when process A opens a handle to the memory of another process (process B). The access rights requested is logged in the GrantedAccess field of the alert. 
 
 This is where the issue is, there are genuine Microsoft binary signed programs and services that request access to lsass such as task manager and antiviruses - there needs to be a rule which can differentiate reputable software from illegitimate software.
 
@@ -36,14 +36,20 @@ detection:
 
 ## Finding 1: Sentinel/KQL Failure
 
-I attempted to convert my sigma rule from YAML into Sentinel/KQL.
+I attempted to convert my sigma rule from YAML into Sentinel/KQL however faced one error after another.
 Tools: sigma-cli + pysigma-backend-kusto, pipeline azure_monitor_pipeline
 
-Error 1: `Unable to determine table name for category: process_access` the pipeline had no table mapping for this sigma category
+Error 1: `Unable to determine table name for category: process_access` the pipeline had no table mapping for this sigma category.
 I tried fixing this issue by using a custom pipeline and pointing query_table at generic Event table.
 
+To fix this i tried manually pointing the pipeline at the generic `Event` table
+
 Error 2: `Invalid SigmaDetectionItem field name encountered: TargetImage`
-Sentinel ingests Windows logs 2 ways - raw (XML dumped into `EventData/ParameterXml`, no named columns) or parsed (DCR extracts fields like `TargetImage` into real columns) 
+Sentinel ingests Windows logs 2 ways: 
+    1. raw (Windows logs dumped into one large XML text, so no columns names like TargetImage)
+    2. parsed (A MS component like DCR reads that XML and extracts fields like `TargetImage` into real columns) 
+
+My home lab's sentinel only has raw ingestion so sentinel had no idea what a column was - couldn't identify `TargetImage`
 
 ## Finding 2: Splunk
 
@@ -58,17 +64,30 @@ NOT (SourceImage IN ("*\MsMpEng.exe", "C:\Windows\System32\taskmgr.exe"))
 
 Why it worked: Splunk's Windows/Sysmon pipeline maps Sigma's neutral field names directly
 I found out Splunk has 2 `IN` behaviours: 
-- Search-command `IN` supports wildcards
-- eval/where IN() function *doesn't* support wildcards - strict equality
+    - Search-command `IN` supports wildcards
+    - eval/where IN() function *doesn't* support wildcards - exact string match 
 
-The `*\MsMpEng.exe` wildcard only worked because it landed in the search-command `IN` behaviour.
+The `*\MsMpEng.exe` wildcard only worked because it landed in the search-command `IN` behaviour (plain search)
 
 
-## Finding 3 & 4: Telemetry capture
+## Finding 3: Telemetry capture
 
 When i first tried dumping, EID 10 alert was generated in Sysmon: 
-- SourceImage: taskmgr.exe
-- GrantedAccess: 0x1400 / 0x3200
-The rule did not fire an alert correctly since 0x1400 wasn't part of the 5 selection values in my sigma rule. This means selection is False on its own hence never reaches the filters (filter_taskmgr was never reached)
+    - SourceImage: taskmgr.exe
+    - GrantedAccess: 0x1400 / 0x3200
+The rule did not fire an alert correctly since 0x1400 wasn't part of the 5 selection values in my sigma rule. The reason being PPL(RunAsPPL) was enabled, this blocks the OpenProcess() call needed to request `VM_READ`+`DUP_HANDLE` before Sysmon can log it - no EID 10 was produced
 
-The second time i tried, 
+Since the hex code listed (0x1400 / 0x3200) wasn't part of the values, the selection is False on its own so never reaches the filters (filter_taskmgr was never reached)
+
+The second time I tried, I noticed in one of the EID 10 logs:
+    - GrantedAccess : `0x1fffff` - this hex code represents **PROCESS_ALL_ACCESS*.
+    - SourceImage: `procdump64.exe`
+
+This rule will fire since the selection criteria was met (lsass.exe, 0x1fffff) so it passes down to filters - procdump64.exe ≠ taskmgr.exe or *\MsMpEng.exe so an engineer would be alerted.
+
+
+## Conclusion
+Understanding that the service/application itself is not necessarily harmful but the access rights requested was something that helped understand this project and how detection works.
+
+
+
