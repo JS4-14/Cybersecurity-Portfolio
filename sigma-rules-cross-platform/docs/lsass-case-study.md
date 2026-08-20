@@ -72,18 +72,20 @@ The `*\MsMpEng.exe` wildcard only worked because it landed in the search-command
 
 ## Finding 3: Telemetry capture
 
-When i first tried dumping, EID 10 alert was generated in Sysmon: 
+(3a) When i first checked Sysmon logs, there was multiple EID 10 logs: 
     - SourceImage: taskmgr.exe
     - GrantedAccess: 0x1400 / 0x3200
-The rule did not fire an alert correctly since 0x1400 wasn't part of the 5 selection values in my sigma rule. The reason being PPL(RunAsPPL) was enabled, this blocks the OpenProcess() call needed to request `VM_READ`+`DUP_HANDLE` before Sysmon can log it - no EID 10 was produced
-
+The rule would not fire an alert correctly since 0x1400 wasn't part of the 5 selection values in my sigma rule. 
 Since the hex code listed (0x1400 / 0x3200) wasn't part of the values, the selection is False on its own so never reaches the filters (filter_taskmgr was never reached)
 
-The second time I tried, I noticed in one of the EID 10 logs:
+(3b) I tried generating logs by creating dump files but no EID 10 events were logged. The reason being PPL(RunAsPPL) was enabled, this blocks the OpenProcess() call needed to request `VM_READ`+`DUP_HANDLE` before Sysmon can log it - no EID 10 was produced
+
+(3c) The second time I tried, I noticed in one of the EID 10 logs:
     - GrantedAccess : `0x1fffff` - this hex code represents **PROCESS_ALL_ACCESS*.
     - SourceImage: `procdump64.exe`
 
 This rule will fire since the selection criteria was met (lsass.exe, 0x1fffff) so it passes down to filters - procdump64.exe ≠ taskmgr.exe or *\MsMpEng.exe so an engineer would be alerted.
+
 
 
 ## Conclusion
