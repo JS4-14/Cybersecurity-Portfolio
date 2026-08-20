@@ -78,7 +78,11 @@ The `*\MsMpEng.exe` wildcard only worked because it landed in the search-command
 The rule would not fire an alert correctly since 0x1400 wasn't part of the 5 selection values in my sigma rule. 
 Since the hex code listed (0x1400 / 0x3200) wasn't part of the values, the selection is False on its own so never reaches the filters (filter_taskmgr was never reached)
 
-(3b) I tried generating logs by creating dump files but no EID 10 events were logged. The reason being PPL(RunAsPPL) was enabled, this blocks the OpenProcess() call needed to request `VM_READ`+`DUP_HANDLE` before Sysmon can log it - no EID 10 was produced
+(3b) I tried generating logs by creating dump files but no EID 10 events were logged. The reason being PPL(RunAsPPL) was enabled, this blocks the OpenProcess() call needed to request `VM_READ`+`DUP_HANDLE` before Sysmon can log it - no EID 10 was produced.
+After disabling PPL and re-triggering the dump, EID 10 captured:
+
+    - SourceImage: taskmgr.exe
+    - GrantedAccess: 0x1410
 
 (3c) The second time I tried, I noticed in one of the EID 10 logs:
     - GrantedAccess : `0x1fffff` - this hex code represents **PROCESS_ALL_ACCESS*.
