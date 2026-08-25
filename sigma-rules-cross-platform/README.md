@@ -9,7 +9,7 @@ Detection logic written once, in Sigma's field-name format, should be portable a
 | Rule | Technique | Status |
 |---|---|---|
 | `lsass_credential_access.yml` | T1003.001 — LSASS Credential Access | Validated (KQL blocked/documented, SPL clean, real-telemetry for all 3 logic paths) |
-| `mshta_suspicious_execution.yml` | T1218.005 — Mshta |  |
+| `mshta_suspicious_execution.yml` | T1218.005 — Mshta | KQL blocked/documented, SPL clean, real-telemetry (single-path, no filter blocks) |
 
 ## What "validated" means here
 
