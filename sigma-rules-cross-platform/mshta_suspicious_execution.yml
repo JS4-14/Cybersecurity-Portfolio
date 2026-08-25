@@ -15,7 +15,7 @@ logsource:
     product: windows
 detection:
     selection:
-        OriginalFileName: C:\Windows\System32\mshta.exe
+        OriginalFileName: MSHTA.EXE
         CommandLine|contains:
             - "http://"
             - "https://"
