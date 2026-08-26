@@ -33,12 +33,12 @@ level: high
 ## Decisions
 I did not include any filter since I determined that there are no apps which need to invoke a URL request or scripts through mshta, this is not normal behaviour seen by apps or users hence it would only occur if there was an adversary with an ulterior goal - there is no legitimate caller.
 
-I originally used `Image` instead of `OriginalFileName` however realised that an attacker could copy and paste the legitimate mshta.exe then rename it or replace it and it would not be flagged however `OriginalFileName` is a Sysmon field from the PE header's metadata
+I originally used `Image` instead of `OriginalFileName` (Image: C:\Windows\System32\mshta.exe) but this can be overcome by copying mshta.exe to a different location whereas `OriginalFileName` is a field which reads the PE metadata of mshta.exe rather than the file path so attackers can't simply rename and save it elsewhere. 
 
 # Finding 1: Sentinel/KQL
 Converting to Sentinel's KQL was successful but the issue was it returned no results because the field names in my sigma rule only work if my workspace parsed raw sysmon XML into columns so it looked like it worked but no results were returned.
 
 # Finding 2: SPL 
-Converting to SPL was successful, targeting the right source
+Converting to SPL was successful, targeting the right source.
 
 
