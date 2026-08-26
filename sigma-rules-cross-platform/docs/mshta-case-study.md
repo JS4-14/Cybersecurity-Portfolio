@@ -38,7 +38,7 @@ I originally used `Image` instead of `OriginalFileName` however realised that an
 # Finding 1: [Sentinel/KQL]
 Converting to Sentinel's KQL was successful but the resulting query targeted a table that didn't contain the field I needed for a typical Sentinel setup - this meant it would return 0 results in a real environment
 
-# Finding 2: Real Telemetry 
+# Finding 2: SPL 
 Converting to SPL was successful, targeting the right source
 
 
