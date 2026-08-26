@@ -36,7 +36,7 @@ I did not include any filter since I determined that there are no apps which nee
 I originally used `Image` instead of `OriginalFileName` however realised that an attacker could copy and paste the legitimate mshta.exe then rename it or replace it and it would not be flagged however `OriginalFileName` is a Sysmon field from the PE header's metadata
 
 # Finding 1: Sentinel/KQL
-Converting to Sentinel's KQL was successful but the resulting query targeted a table that didn't contain the field I needed for a typical Sentinel setup - this meant it would return 0 results in a real environment
+Converting to Sentinel's KQL was successful but the issue was it returned no results because the field names in my sigma rule only work if my workspace parsed raw sysmon XML into columns so it looked like it worked but no results were returned.
 
 # Finding 2: SPL 
 Converting to SPL was successful, targeting the right source
