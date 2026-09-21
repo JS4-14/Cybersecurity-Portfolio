@@ -65,4 +65,4 @@ The competition provided hands-on experience applying concepts from cryptography
 
 ## Skills Demonstrated
 
-`Cybersecurity` `Digital Forensics` `Cryptography` `Steganography` `OSINT` `Linux` `Problem Solving` `Teamwork` `Investigation`
+`Cybersecurity` `Digital Forensics` `Cryptography` `Steganography` `Linux` `Problem Solving` `Teamwork` `Investigation`
