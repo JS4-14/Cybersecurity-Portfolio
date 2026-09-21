@@ -2,9 +2,9 @@
 
 ## Overview
 
-Team CTF competition hosted by Aston and Warwick University cybersecurity societies. Working as part of an Aston team, we placed **3rd of 5–7 teams overall — the only Aston University team to finish on the podium.**
+Team CTF competition hosted by Aston and Warwick University cybersecurity societies. Working as part of an Aston team, we placed **3rd place overall — the only Aston University team to finish on the podium.**
 
-The competition covered practical challenges across digital forensics, cryptography, steganography, OSINT, and general problem-solving, scored on a decaying-points system (each challenge was worth less the more teams solved it) — which rewarded prioritisation and speed as much as accuracy.
+The competition covered practical challenges across digital forensics, cryptography, steganography, and general problem-solving, scored on a decaying-points system (each challenge was worth less the more teams solved it) — which rewarded prioritisation and speed as much as accuracy.
 
 ---
 
@@ -18,9 +18,6 @@ Analysed encoded and encrypted data and applied appropriate decoding and decrypt
 
 ### 🖼️ Steganography
 Examined image and audio files for concealed information using file analysis techniques.
-
-### 🌐 Open Source Intelligence (OSINT)
-Used publicly available information to gather clues and solve investigative challenges.
 
 ### ⚙️ Miscellaneous Challenges
 Worked through logic-based and unconventional problems requiring creative problem-solving approaches.
