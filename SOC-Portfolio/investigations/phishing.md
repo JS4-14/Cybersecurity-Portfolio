@@ -26,7 +26,7 @@ Immediate containment actions were recommended to reduce further risk.
 
 The incident was identified after:
 
-- Two logins 7 mins apart from 2 different locations from the same account 
+- Two logins 7 mins apart from 2 different locations via the same account 
 - Multiple emails sent internally from same account (Compromised account)
 
 ---
@@ -65,7 +65,6 @@ The incident was identified after:
 |------------|------------------|
 | Potential Trojan | No software or files downloaded |
 
-
 ---
 
 ## Analysis
@@ -84,15 +83,15 @@ The incident was identified after:
 
 6. At 9:34 & 9:44 the same account logged in from 2 different countries
 
-7. 9:44: Multiple internal emails sent from employer
+7. 9:44 Multiple internal emails sent from the employer
 
 ### How Was It Detected?
 
-[Explain how the suspicious activity was identified.]
+Having 2 logins originate from the same user account but in two different geological location is suspicious but does not prove compromise, what adds to the suspicious and severity is 27 emails being sent internally outbound from the same account.
 
 ### Why Is It Suspicious?
 
-[Explain the evidence and reasoning.]
+Its suspicious since this may not be considered expected behaviour of the user where they'd send 27 emails. Once the employer entered the details into 'Microsofts' site, it was followed by another login in a different location and the next sequence of event was the emails.
 
 ### Likely Attacker Objective
 
