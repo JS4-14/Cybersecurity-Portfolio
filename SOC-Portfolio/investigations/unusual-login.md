@@ -133,9 +133,8 @@ Severity was assessed as **Medium** because **zip file was sent and difficult to
 ## Recommendations
 
 1. Principle of Least Privilege - Powershell and WinRM, this should not have ran unless the feature was needed by the company, if PowerShell was restricted the scenario would not have played out
-2. [Recommendation 2]
-3. [Recommendation 3]
-4. [Recommendation 4]
+2. Train staff to be aware of attachments of emails and to ensure the sender is familiar and genuine
+3. Be aware of emails and how they are written - urgency is usually within emails so the user worries and goes ahead with the steps
 
 ---
 
