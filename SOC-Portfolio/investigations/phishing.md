@@ -64,7 +64,7 @@ The incident was identified after:
 | Possibility | Reason Ruled Out |
 |------------|------------------|
 | Potential Trojan | No software or files downloaded |
-| [Alternative Explanation] | [Reason] |
+
 
 ---
 
@@ -160,8 +160,8 @@ The incident highlights the importance of:
 
 | Technique | Description |
 |------------|------------|
-| [Txxxx] | [Technique Name] |
-| [Txxxx] | [Technique Name] |
+| T1566.002 | Spearphishing Link |
+| T1078 | Valid Accounts for the account compromise |
 
 ---
 
