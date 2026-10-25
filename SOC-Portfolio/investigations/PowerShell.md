@@ -134,9 +134,10 @@ Severity was assessed as **Medium** because **the likelihood of a register being
 
 ## Recommendations
 
-1. Enforce Principle of Least Privilege, this happened because PowerShell did not have any restrictions 
-2. Weak Firewall rules - Enforce outbound and inbound connections whether its allowlisting user devices only or blocklisting unknown IP addresses
-3. Train staff to identify any signs of suspicious emails by checking the senders address and checking any attachments with VirusTotal or with peers
+1.Implement Microsoft Defenders ASR (Attack Surface Reduction) rule called "Block all Office applications from creating child processes"
+2. Enforce Principle of Least Privilege, this happened because PowerShell did not have any restrictions 
+3. Weak Firewall rules - Enforce outbound and inbound connections whether its allowlisting user devices only or blocklisting unknown IP addresses
+4. Train staff to identify any signs of suspicious emails by checking the senders address and checking any attachments with VirusTotal or with peers
 
 ---
 
