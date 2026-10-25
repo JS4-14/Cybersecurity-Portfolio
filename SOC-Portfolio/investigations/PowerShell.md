@@ -155,7 +155,9 @@ The incident highlights the importance of:
 | Technique | Description |
 |------------|------------|
 | T1566.001 | Spearphishing Attachment - The adversary sends a targeted email containing the .docm file as an attachment to trick the user |
-| T1204.002 | User Execution: Malicious File - The attack relies on a human clicking the file and manually clicking "Enable Editing" to bypass Microsoft Office's default security blocks |
+| T1204.002 | User Execution: Malicious File - The attack relies on a human clicking the file and manually clicking "Enable Editing" to bypass Microsoft 
+Office's default security blocks |
+| T1059.001 | Command and Scripting Interpreter: PowerShell |
 
 ---
 
