@@ -8,8 +8,3 @@ Hands-on cybersecurity projects, investigations, and CTF work — BSc Cybersecur
 - [SOC Portfolio](SOC-Portfolio) — SOC incident investigation writeups (malware, phishing, unusual login, PowerShell abuse) with MITRE ATT&CK mapping
 - [Phishing Analysis Reports](phishing-analysis-reports) — real phishing email breakdowns: sender spoofing, link analysis, social engineering tactics
 - [Aston x Warwick CTF](aston-warwick-ctf) — university CTF, digital forensics/cryptography focus
-
-
-## Background Learning
-
-- [Google Cybersecurity Certificate Notes](google-cybersecurity-cert) — coursework notes
