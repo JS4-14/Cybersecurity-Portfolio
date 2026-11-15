@@ -56,6 +56,7 @@ The converted query used wildcards in the `IN` operator - Splunk's search comman
 `mshta.exe about:"<script language=\"vbscript\">CreateObject(\"Wscript.Shell\").Run \"calc.exe\":window.close</script>"`
 `"C:\WINDOWS\system32\mshta.exe" "about:<script language=\vbscript\>CreateObject(\Wscript.Shell\).Run \calc.exe\:window.close</script>"`
 
-`CommandLine|contains` is a literal string check, the payload has \vbscript\ - no ':' which is why 'vbscript:' will never match. 
+- `CommandLine|contains` is a literal string check, the payload has \vbscript\ - no ':' which is why 'vbscript:' will never match. 
 This means a rule with 'vbscript' is not flagged.
+- This shows a rule relying only on vbscript: as a selection value would have missed this payload - `about:` is what actually catches VBScript.
 
