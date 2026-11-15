@@ -41,9 +41,21 @@ I originally used `Image` instead of `OriginalFileName` (Image: C:\Windows\Syste
 - The pipeline (`azure_monitor_pipeline`) has a built in mapping for `process_creation` (maps to SecurityEvent) where Windows Security Auditing is enabled so it chose that automatically, having not known my lab only has Sysmon.
 - This was a silent error because the pipeline worked - SecurityEvent is a table in many environments, the mismatch was with my lab (I had Sysmon only and `Windows Security Auditing` wasn't enabled) but `sigma-cli` could not know that - it just converted.
 
+`SecurityEvent
+| where NewProcessName =~ "C:\\Windows\\System32\\mshta.exe" and (CommandLine contains "http://" or CommandLine contains "https://" or CommandLine contains "vbscript:" or CommandLine contains "javascript:" or CommandLine contains "about:")`
+
 The mshta issue is worse than LSASS since the person who deployed the mshta conversion would assume it was successful with coverage on any attempts since there were no errors however it would return no alerts or results.
+
 
 # Finding 2: SPL 
 Converting to SPL was successful, targeting the right source.
+The converted query used wildcards in the `IN` operator - Splunk's search command `IN` supports wildcards.
 
+
+# Finding 3: CommandLine
+`mshta.exe about:"<script language=\"vbscript\">CreateObject(\"Wscript.Shell\").Run \"calc.exe\":window.close</script>"`
+`"C:\WINDOWS\system32\mshta.exe" "about:<script language=\vbscript\>CreateObject(\Wscript.Shell\).Run \calc.exe\:window.close</script>"`
+
+`CommandLine|contains` is a literal string check, the payload has \vbscript\ - no ':' which is why 'vbscript:' will never match. 
+This means a rule with 'vbscript' is not flagged.
 
