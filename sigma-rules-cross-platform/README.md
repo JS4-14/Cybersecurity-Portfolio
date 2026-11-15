@@ -10,6 +10,8 @@ Detection logic written once, in Sigma's field-name format, should be portable a
 |---|---|---|
 | `lsass_credential_access.yml` | T1003.001 — LSASS Credential Access | Validated (KQL blocked/documented, SPL clean, real-telemetry for all 3 logic paths) |
 | `mshta_suspicious_execution.yml` | T1218.005 — Mshta | KQL blocked/documented, SPL clean, real-telemetry (single-path, no filter blocks) |
+| `Kerberoasting` | T1558.003 | Windows Security Event ID 4769 with RC4 encryption type |
+| `Suspicious PowerShell download` | T1059.001 + T1105 | 
 
 ## What "validated" means here
 
