@@ -36,7 +36,12 @@ I did not include any filter since I determined that there are no apps which nee
 I originally used `Image` instead of `OriginalFileName` (Image: C:\Windows\System32\mshta.exe) but this can be overcome by copying mshta.exe to a different location whereas `OriginalFileName` is a field which reads the PE metadata of mshta.exe rather than the file path so attackers can't simply rename and save it elsewhere. 
 
 # Finding 1: Sentinel/KQL
-Converting to Sentinel's KQL was successful but the issue was it returned no results because the field names in my sigma rule only work if my workspace parsed raw sysmon XML into columns so it looked like it worked but no results were returned.
+- LSASS's `process_access` category has no mapping in the pipeline (`azure_monitor_pipeline`) i used, so the deployment had errors. 
+- Mshta had an issue with conversion but it was a silent failure, it converted. The issue was `process_creation` had a wrong table match - sigma convert successfully converted but produced KQL for `SecurityEvent (EID 4688)` which is windows' in built Security Auditing whereas my home lab used Sysmon hence it mapped to an entirely different table (SecurityEvent instead of Sysmon's).
+- The pipeline (`azure_monitor_pipeline`) has a built in mapping for `process_creation` (maps to SecurityEvent) where Windows Security Auditing is enabled so it chose that automatically, having not known my lab only has Sysmon.
+- This was a silent error because the pipeline worked - SecurityEvent is a table in many environments, the mismatch was with my lab (I had Sysmon only and `Windows Security Auditing` wasn't enabled) but `sigma-cli` could not know that - it just converted.
+
+The mshta issue is worse than LSASS since the person who deployed the mshta conversion would assume it was successful with coverage on any attempts since there were no errors however it would return no alerts or results.
 
 # Finding 2: SPL 
 Converting to SPL was successful, targeting the right source.
