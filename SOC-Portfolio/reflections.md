@@ -4,6 +4,21 @@ This document records how my investigation methodology has evolved across each s
 
 ---
 
+# Questions I Continue Asking During Every Investigation
+
+- What actually happened?
+- What evidence proves that?
+- What assumptions am I making?
+- What alternative explanations exist?
+- What evidence would increase or decrease my confidence?
+- What would I investigate next if I had access to the SIEM or EDR?
+- Which ATT&CK techniques best explain the observed behaviour?
+- How would I prevent this attack from succeeding again?
+
+These questions now guide every investigation I perform.
+
+---
+
 # Report 1 — Phishing
 
 ## New Concepts
@@ -124,16 +139,3 @@ Build evidence-supported conclusions
 I still have significant room for improvement, particularly in enterprise Windows environments, PowerShell abuse, Active Directory and detection engineering, but these reports have shown me where those gaps exist.
 
 ---
-
-# Questions I Continue Asking During Every Investigation
-
-- What actually happened?
-- What evidence proves that?
-- What assumptions am I making?
-- What alternative explanations exist?
-- What evidence would increase or decrease my confidence?
-- What would I investigate next if I had access to the SIEM or EDR?
-- Which ATT&CK techniques best explain the observed behaviour?
-- How would I prevent this attack from succeeding again?
-
-These questions now guide every investigation I perform.
