@@ -27,5 +27,5 @@ Early in validation, a synthetic test case (`GrantedAccess: 0x1fffff` from `task
 
 ## Key cross-platform findings
 
-- **Sentinel/KQL:** conversion can fail silently - a query can convert without error and still never match anything, because Sentinel workspaces ingest Windows Event Logs either raw (unparsed XML) or parsed (queryable Sysmon fields), and that's environment-specific, not something the conversion tooling can infer.
+- **Sentinel/KQL:** conversion can fail silently - a query can convert without error and still never match anything, because Sentinel workspaces ingest Windows Event Logs either raw (unparsed XML) or parsed (queryable Sysmon fields), and that's environment-specific, not something the conversion tooling can infer itself.
 - **Splunk/SPL:** the search-command `IN` operator supports wildcards; the `eval`/`where` `IN()` function does not. Easy to lose wildcard filter behaviour silently when extending a converted query with post-processing.
